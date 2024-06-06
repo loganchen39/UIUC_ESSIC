@@ -1,0 +1,5 @@
+gnuplot plt_lpr_corr_spa_frq_dist_aio.gp
+gnuplot plt_opr_corr_spa_frq_dist_aio.gp
+gnuplot plt_t2m_rmse_spa_frq_dist_aio.gp
+gnuplot plt_bar_t2m_lpr.gp
+

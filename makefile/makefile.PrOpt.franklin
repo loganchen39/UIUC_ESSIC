@@ -1,0 +1,48 @@
+# compile command line, make sure module_usrfunc.f90 is placed before PrOpt.f90
+
+# ftn module_usrfunc.f90 PrOpt.f90 -o PrOpt.exe 
+# -I/opt/cray/netcdf/4.0.0.3/netcdf-pgi/include 
+# -L/opt/cray/netcdf/4.0.0.3/netcdf-pgi/lib -lnetcdf 
+# -L/u0/l/lgchen/lib/libc -llxzlib 
+# -L/u0/l/lgchen/lib/ffsqp -lffsqp
+
+
+# user defined variables and "make" embedded variables such as "CC", "CFLAGS" for implicit rules
+PROG = PrOpt.exe
+SRCS = PrOpt.f90 module_usrfunc.f90
+OBJS = PrOpt.o module_usrfunc.o
+
+LIBS     = -L/opt/cray/netcdf/4.0.0.3/netcdf-pgi/lib -lnetcdf  \
+           -L${HOME}/lib/libc  -llxzlib                   \
+           -L${HOME}/lib/ffsqp -lffsqp
+INCLUDES = -I/opt/cray/netcdf/4.0.0.3/netcdf-pgi/include
+
+F90      = ftn
+FFLAGS   = -fconvert=big-endian
+LDFLAGS  = -static
+
+
+# dependencies (targets and their prerequisites) and rules (both )
+all: $(PROG)
+#    rm -f $(OBJS) *.mod   It doesn't work with this command
+
+$(PROG): $(OBJS)
+	$(F90) $(LDFLAGS) -o $@ $(OBJS) $(INCLUDES)  $(LIBS)
+
+# it also works without $(OBJS) in this case
+$(OBJS): %.o: %.f90  
+	$(F90) $(FFLAGS) -c $<
+
+clean:
+	rm -f $(OBJS) *.mod
+
+clean_all:
+	rm -f $(PROG) $(OBJS) *.mod
+
+.phony: clean clean_all
+
+# .SUFFIXES: $(SUFFIXES) .f90 .o
+
+
+# DEPENDENCIES : only dependencies after this line (don't remove the word DEPENDENCIES)
+PrOpt.o: module_usrfunc.o

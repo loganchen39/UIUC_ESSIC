@@ -1,0 +1,7 @@
+ifort -O2 -c -convert big_endian liblxzlib.F
+
+rm -f liblxzlib.a
+ar ru liblxzlib.a liblxzlib.o
+
+rm -f liblxzlib.o
+

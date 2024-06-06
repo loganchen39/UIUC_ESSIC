@@ -1,0 +1,6513 @@
+%!PS-Adobe-2.0
+%%Title: fig_lpr_corr_spa_frq_dist_7.ps
+%%Creator: gnuplot 4.2 patchlevel 0
+%%CreationDate: Tue May 11 16:00:53 2010
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following 6 true/false flags may be edited by hand if required
+% The unit line width may also be changed
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Rounded false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+%
+/vshift -36 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+Level1 {} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (fig_lpr_corr_spa_frq_dist_7.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.2 patchlevel 0)
+  /Author (Min Xu)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Tue May 11 16:00:53 2010)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Gnuplot Prolog Version 4.2 (August 2006)
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  gsave 1 setgray fill grestore clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {show} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} bind def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get stringwidth pop add} {pop} ifelse} ifelse} forall} bind def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Times-Roman) findfont 110 scalefont setfont
+0.000 UP
+1.000 UL
+LTb
+1.00 1.00 1.00 C gsave 0 0 N 0 5039 V 7199 0 V 0 -5039 V 1 PolyFill
+LTb
+0 0 M
+0 5039 L
+7199 0 V
+7199 0 L
+0 0 L
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+stroke
+0.200 UL
+LTb
+0 4027 M
+63 0 V
+stroke
+-66 4027 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 4)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 4280 M
+63 0 V
+stroke
+-66 4280 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 8)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 4533 M
+63 0 V
+stroke
+-66 4533 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 12)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 4787 M
+63 0 V
+stroke
+-66 4787 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 16)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 5040 M
+63 0 V
+stroke
+-66 5040 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 20)]
+] -36.7 MRshow
+0.200 UL
+LTb
+276 3780 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+0 5040 N
+0 3780 L
+1440 0 V
+0 1260 V
+0 5040 L
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+58 3837 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (DJF)]
+] -40.0 MLshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C LTb
+393 4922 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (AEoff)]
+] -36.7 MLshow
+LT1
+0.00 0.00 0.55 C 132 4922 M
+195 0 V
+60 3780 M
+71 228 V
+73 -6 V
+72 310 V
+73 -6 V
+73 50 V
+73 76 V
+72 133 V
+73 -32 V
+73 -12 V
+72 -266 V
+73 -228 V
+73 19 V
+73 -139 V
+72 -51 V
+73 -51 V
+58 -25 V
+stroke
+LT1
+0.55 0.00 0.00 C LTb
+393 4812 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (AVG)]
+] -36.7 MLshow
+LT1
+0.55 0.00 0.00 C 132 4812 M
+195 0 V
+0 3809 M
+58 41 V
+73 120 V
+73 215 V
+72 26 V
+73 126 V
+73 196 V
+73 7 V
+72 101 V
+73 -196 V
+73 -158 V
+72 -241 V
+73 25 V
+73 -88 V
+73 -64 V
+72 -69 V
+73 -26 V
+64 -44 V
+stroke
+LT1
+0.00 0.55 0.55 C LTb
+393 4702 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (GFDL)]
+] -36.7 MLshow
+LT1
+0.00 0.55 0.55 C 132 4702 M
+195 0 V
+0 3785 M
+58 20 V
+73 76 V
+73 311 V
+72 -7 V
+73 260 V
+73 50 V
+73 121 V
+72 -70 V
+73 19 V
+73 -253 V
+72 -253 V
+73 44 V
+73 -234 V
+73 25 V
+72 -13 V
+73 -38 V
+66 -63 V
+stroke
+LT0
+0.00 0.39 0.00 C LTb
+393 4592 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (F-L)]
+] -36.7 MLshow
+LT0
+0.00 0.39 0.00 C 132 4592 M
+195 0 V
+4 3780 M
+54 19 V
+73 108 V
+73 323 V
+72 -95 V
+73 202 V
+73 304 V
+73 -133 V
+72 -25 V
+73 88 V
+73 -101 V
+72 -158 V
+73 -285 V
+73 -108 V
+73 -95 V
+63 -44 V
+stroke
+LT0
+LC4 setrgbcolor
+LTb
+393 4482 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (CSIRO)]
+] -36.7 MLshow
+LT0
+LC4 setrgbcolor
+132 4482 M
+195 0 V
+0 3803 M
+58 40 V
+73 133 V
+73 159 V
+72 145 V
+73 -38 V
+73 317 V
+73 -38 V
+72 -57 V
+73 69 V
+73 -145 V
+72 -76 V
+73 -253 V
+73 -108 V
+73 -120 V
+72 -26 V
+73 -25 V
+stroke
+LT1
+LC3 setrgbcolor
+LTb
+393 4372 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (CCC)]
+] -36.7 MLshow
+LT1
+LC3 setrgbcolor
+132 4372 M
+195 0 V
+0 3795 M
+58 10 V
+73 64 V
+73 114 V
+72 335 V
+73 215 V
+73 -151 V
+73 31 V
+72 57 V
+73 139 V
+73 -19 V
+72 -329 V
+73 -139 V
+73 -222 V
+73 -101 V
+72 44 V
+73 -44 V
+55 -19 V
+stroke
+LT0
+LC2 setrgbcolor
+LTb
+393 4262 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (CAM)]
+] -36.7 MLshow
+LT0
+LC2 setrgbcolor
+132 4262 M
+195 0 V
+0 3783 M
+58 10 V
+73 101 V
+73 234 V
+72 152 V
+73 -107 V
+73 246 V
+73 374 V
+72 -247 V
+73 -38 V
+73 -177 V
+72 -171 V
+73 -114 V
+73 57 V
+73 -196 V
+72 -51 V
+67 -76 V
+stroke
+LT0
+LC1 setrgbcolor
+LTb
+393 4152 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (AER)]
+] -36.7 MLshow
+LT0
+LC1 setrgbcolor
+132 4152 M
+195 0 V
+4 3780 M
+54 19 V
+73 19 V
+73 165 V
+72 399 V
+73 208 V
+73 146 V
+73 -38 V
+72 -361 V
+73 51 V
+73 -177 V
+72 -26 V
+73 -177 V
+73 44 V
+73 -120 V
+72 -127 V
+59 -25 V
+stroke
+LT0
+LC0 setrgbcolor
+LTb
+393 4042 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (GSFC)]
+] -36.7 MLshow
+LT0
+LC0 setrgbcolor
+132 4042 M
+195 0 V
+0 3793 M
+58 50 V
+73 51 V
+73 184 V
+72 209 V
+73 170 V
+73 26 V
+73 0 V
+72 12 V
+73 76 V
+73 -202 V
+72 -152 V
+73 -171 V
+73 -63 V
+73 -108 V
+72 -25 V
+67 -70 V
+stroke
+0.200 UL
+LTb
+0 5040 N
+0 3780 L
+1440 0 V
+0 1260 V
+0 5040 L
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+0 2767 M
+63 0 V
+stroke
+-66 2767 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 4)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 3020 M
+63 0 V
+stroke
+-66 3020 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 8)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 3273 M
+63 0 V
+stroke
+-66 3273 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 12)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 3527 M
+63 0 V
+stroke
+-66 3527 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 16)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 3780 M
+63 0 V
+stroke
+-66 3780 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 20)]
+] -36.7 MRshow
+0.200 UL
+LTb
+276 2520 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+0 3780 N
+0 2520 L
+1440 0 V
+0 1260 V
+0 3780 L
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+58 2577 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MAM)]
+] -40.0 MLshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 0 2544 M
+58 46 V
+73 107 V
+73 146 V
+72 44 V
+73 114 V
+73 127 V
+73 221 V
+72 26 V
+73 -253 V
+73 -114 V
+72 -140 V
+73 19 V
+73 -12 V
+73 -178 V
+72 -63 V
+73 -76 V
+73 -19 V
+54 -19 V
+stroke
+LT1
+0.55 0.00 0.00 C 0 2528 M
+58 55 V
+73 32 V
+73 203 V
+72 386 V
+73 183 V
+73 -31 V
+73 -184 V
+72 -44 V
+73 -32 V
+73 -69 V
+72 -178 V
+73 -12 V
+73 -152 V
+73 -76 V
+72 25 V
+73 -70 V
+64 -44 V
+stroke
+LT1
+0.00 0.55 0.55 C 0 2574 M
+58 66 V
+73 95 V
+73 190 V
+72 95 V
+73 -38 V
+73 -57 V
+73 76 V
+72 108 V
+73 69 V
+73 -19 V
+72 -88 V
+73 -114 V
+73 -190 V
+73 -19 V
+72 -89 V
+73 -76 V
+73 -25 V
+62 -38 V
+stroke
+LT0
+0.00 0.39 0.00 C 0 2523 M
+58 35 V
+73 82 V
+73 83 V
+72 139 V
+73 171 V
+73 177 V
+73 51 V
+72 171 V
+73 -102 V
+73 -227 V
+72 -133 V
+73 -38 V
+73 -190 V
+73 -51 V
+72 -146 V
+59 -25 V
+stroke
+LT0
+LC4 setrgbcolor
+0 2529 M
+58 35 V
+73 45 V
+73 266 V
+72 107 V
+73 304 V
+73 165 V
+73 38 V
+72 -235 V
+73 -145 V
+73 -82 V
+72 -83 V
+73 -183 V
+73 -152 V
+73 -51 V
+62 -38 V
+stroke
+LT1
+LC3 setrgbcolor
+0 2520 M
+58 25 V
+73 70 V
+73 51 V
+72 310 V
+73 247 V
+73 88 V
+73 13 V
+72 82 V
+73 -278 V
+73 -44 V
+72 -76 V
+73 -121 V
+73 -190 V
+73 -57 V
+72 -120 V
+stroke
+LT0
+LC2 setrgbcolor
+0 2523 M
+58 35 V
+73 152 V
+73 165 V
+72 120 V
+73 240 V
+73 -25 V
+73 -25 V
+72 44 V
+73 -95 V
+73 -31 V
+72 -228 V
+73 12 V
+73 -145 V
+73 -108 V
+72 -38 V
+73 -25 V
+73 -51 V
+stroke
+LT0
+LC1 setrgbcolor
+4 2520 M
+54 19 V
+73 76 V
+73 272 V
+72 367 V
+73 76 V
+73 -183 V
+73 -89 V
+72 -57 V
+73 133 V
+73 19 V
+72 -133 V
+73 -183 V
+73 -19 V
+73 -203 V
+72 -57 V
+73 13 V
+73 -38 V
+48 -13 V
+stroke
+LT0
+LC0 setrgbcolor
+0 2540 M
+58 81 V
+73 76 V
+73 222 V
+72 304 V
+73 177 V
+73 -171 V
+73 -44 V
+72 38 V
+73 -196 V
+73 -140 V
+72 -25 V
+73 -25 V
+73 -127 V
+73 -89 V
+72 -31 V
+73 -70 V
+stroke
+0.200 UL
+LTb
+0 3780 N
+0 2520 L
+1440 0 V
+0 1260 V
+0 3780 L
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+0 1507 M
+63 0 V
+stroke
+-66 1507 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 4)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 1760 M
+63 0 V
+stroke
+-66 1760 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 8)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 2013 M
+63 0 V
+stroke
+-66 2013 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 12)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 2267 M
+63 0 V
+stroke
+-66 2267 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 16)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 2520 M
+63 0 V
+stroke
+-66 2520 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 20)]
+] -36.7 MRshow
+0.200 UL
+LTb
+276 1260 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+0 2520 N
+0 1260 L
+1440 0 V
+0 1260 V
+0 2520 L
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+58 1317 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (JJA)]
+] -40.0 MLshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 0 1704 M
+58 82 V
+73 82 V
+73 -95 V
+72 171 V
+73 -127 V
+73 -25 V
+73 44 V
+72 -145 V
+73 6 V
+73 -133 V
+72 -139 V
+73 -127 V
+63 -38 V
+34 0 R
+49 13 V
+72 -13 V
+stroke
+LT1
+0.55 0.00 0.00 C 0 1894 M
+58 -70 V
+73 113 V
+73 -113 V
+72 25 V
+73 38 V
+73 -120 V
+73 -32 V
+72 -82 V
+73 12 V
+73 -177 V
+72 -158 V
+73 19 V
+73 -45 V
+73 -19 V
+72 -25 V
+stroke
+LT1
+0.00 0.55 0.55 C 0 1796 M
+58 91 V
+73 -38 V
+73 -177 V
+72 12 V
+73 7 V
+73 -26 V
+73 -202 V
+72 44 V
+73 -6 V
+73 31 V
+72 7 V
+73 69 V
+73 -6 V
+73 -76 V
+72 -171 V
+73 -76 V
+73 19 V
+73 0 V
+62 -38 V
+stroke
+LT0
+0.00 0.39 0.00 C 0 2072 M
+58 309 V
+73 -330 V
+73 19 V
+72 -19 V
+73 -278 V
+73 -133 V
+73 -114 V
+72 -171 V
+73 19 V
+73 -70 V
+72 -31 V
+49 -13 V
+48 0 R
+49 13 V
+48 -13 V
+stroke
+LT0
+LC4 setrgbcolor
+0 2227 M
+58 -81 V
+73 -101 V
+73 -196 V
+72 -158 V
+73 -83 V
+73 -158 V
+73 38 V
+72 -101 V
+73 69 V
+73 -76 V
+72 -31 V
+73 12 V
+73 -63 V
+73 51 V
+72 -45 V
+73 -6 V
+73 -13 V
+58 -25 V
+stroke
+LT1
+LC3 setrgbcolor
+0 1666 M
+58 31 V
+73 -82 V
+73 158 V
+72 -82 V
+73 234 V
+73 -266 V
+73 38 V
+72 19 V
+73 -133 V
+73 -19 V
+72 -82 V
+73 -32 V
+73 -63 V
+73 -64 V
+72 -38 V
+73 -25 V
+73 0 V
+stroke
+LT0
+LC2 setrgbcolor
+0 2249 M
+58 132 V
+73 -152 V
+73 -311 V
+72 -126 V
+73 -215 V
+73 -102 V
+73 -139 V
+72 0 V
+73 -51 V
+73 51 V
+72 -6 V
+73 -32 V
+73 -38 V
+73 13 V
+48 -13 V
+stroke
+LT0
+LC1 setrgbcolor
+0 1786 M
+58 -51 V
+73 32 V
+73 50 V
+72 7 V
+73 -127 V
+73 44 V
+73 -152 V
+72 45 V
+73 -32 V
+73 6 V
+72 0 V
+73 -158 V
+73 -95 V
+73 0 V
+72 -19 V
+73 -76 V
+stroke
+LT0
+LC0 setrgbcolor
+0 1758 M
+58 40 V
+73 222 V
+73 -102 V
+72 -120 V
+73 146 V
+73 -171 V
+73 -32 V
+72 -240 V
+73 0 V
+73 -89 V
+72 -38 V
+73 -38 V
+73 -63 V
+73 6 V
+72 0 V
+55 -19 V
+stroke
+0.200 UL
+LTb
+0 2520 N
+0 1260 L
+1440 0 V
+0 1260 V
+0 2520 L
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+0 247 M
+63 0 V
+stroke
+-66 247 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 4)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 500 M
+63 0 V
+stroke
+-66 500 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 8)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 753 M
+63 0 V
+stroke
+-66 753 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 12)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 1007 M
+63 0 V
+stroke
+-66 1007 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 16)]
+] -36.7 MRshow
+0.200 UL
+LTb
+0 1260 M
+63 0 V
+stroke
+-66 1260 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 ( 20)]
+] -36.7 MRshow
+0.200 UL
+LTb
+276 0 M
+0 63 V
+stroke
+276 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.2)]
+] -36.7 MCshow
+0.200 UL
+LTb
+567 0 M
+0 63 V
+stroke
+567 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.4)]
+] -36.7 MCshow
+0.200 UL
+LTb
+858 0 M
+0 63 V
+stroke
+858 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.6)]
+] -36.7 MCshow
+0.200 UL
+LTb
+1149 0 M
+0 63 V
+stroke
+1149 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.8)]
+] -36.7 MCshow
+0.200 UL
+LTb
+1440 0 M
+0 63 V
+stroke
+1440 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (1.0)]
+] -36.7 MCshow
+0.200 UL
+LTb
+0.200 UL
+LTb
+0 1260 N
+0 0 L
+1440 0 L
+0 1260 V
+0 1260 L
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+58 57 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SON)]
+] -40.0 MLshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 0 385 M
+58 532 L
+73 278 V
+73 76 V
+276 703 L
+349 488 L
+73 25 V
+73 13 V
+567 266 L
+73 -13 V
+73 -50 V
+72 -38 V
+73 25 V
+73 -70 V
+73 -50 V
+72 -26 V
+73 -31 V
+1198 0 L
+stroke
+LT1
+0.55 0.00 0.00 C 0 333 M
+58 500 L
+73 234 V
+73 -25 V
+72 95 V
+349 703 L
+73 -51 V
+495 462 L
+567 291 L
+73 64 V
+713 241 L
+72 -26 V
+73 -88 V
+931 44 L
+73 0 V
+72 -25 V
+73 0 V
+1222 0 L
+stroke
+LT1
+0.00 0.55 0.55 C 0 196 M
+58 475 L
+73 234 V
+73 209 V
+276 760 L
+349 639 L
+73 13 V
+495 488 L
+72 -76 V
+640 279 L
+73 -64 V
+72 -12 V
+858 95 L
+73 6 V
+73 -57 V
+72 -19 V
+73 19 V
+73 -25 V
+1276 0 L
+stroke
+LT0
+0.00 0.39 0.00 C 0 252 M
+58 576 L
+73 234 V
+73 70 V
+276 627 L
+349 481 L
+73 -44 V
+73 -38 V
+72 6 V
+73 70 V
+713 203 L
+72 25 V
+73 -13 V
+73 -76 V
+73 0 V
+1076 38 L
+1149 0 L
+stroke
+LT0
+LC4 setrgbcolor
+0 71 M
+58 81 V
+73 361 V
+73 164 V
+72 412 V
+73 -32 V
+422 855 L
+495 639 L
+72 -50 V
+640 317 L
+713 215 L
+785 95 L
+854 0 L
+stroke
+LT1
+LC3 setrgbcolor
+0 353 M
+58 576 L
+73 165 V
+73 76 V
+276 576 L
+73 76 V
+422 424 L
+73 51 V
+72 -25 V
+73 -70 V
+73 -38 V
+785 203 L
+73 -83 V
+931 76 L
+73 -38 V
+1076 0 L
+73 19 V
+1222 0 L
+stroke
+LT0
+LC2 setrgbcolor
+0 390 M
+58 532 L
+73 76 V
+73 259 V
+276 728 L
+73 -25 V
+422 538 L
+495 304 L
+72 108 V
+640 196 L
+73 26 V
+72 -32 V
+73 6 V
+73 -69 V
+73 -64 V
+72 -50 V
+73 12 V
+73 -6 V
+1276 0 L
+stroke
+LT0
+LC1 setrgbcolor
+0 309 M
+58 431 L
+73 208 V
+73 241 V
+276 665 L
+73 19 V
+73 19 V
+495 488 L
+72 -57 V
+73 -76 V
+73 -89 V
+785 127 L
+73 44 V
+931 19 L
+73 25 V
+72 -31 V
+1149 0 L
+stroke
+LT0
+LC0 setrgbcolor
+0 424 M
+58 728 L
+73 38 V
+204 551 L
+276 450 L
+73 25 V
+73 108 V
+73 -45 V
+567 367 L
+73 -63 V
+73 13 V
+72 0 V
+858 177 L
+73 -6 V
+1004 38 L
+72 0 V
+73 -25 V
+1198 0 L
+stroke
+0.200 UL
+LTb
+0 1260 N
+0 0 L
+1440 0 L
+0 1260 V
+0 1260 L
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+1440 4027 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+1716 3780 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+1440 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT0
+0.00 0.39 0.00 C LTb
+1833 4922 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (NARR)]
+] -36.7 MLshow
+LT0
+0.00 0.39 0.00 C 1572 4922 M
+195 0 V
+1440 3834 M
+58 41 V
+73 184 V
+73 373 V
+72 329 V
+73 108 V
+73 -355 V
+73 26 V
+72 -184 V
+73 -183 V
+73 -165 V
+72 -82 V
+73 25 V
+73 -101 V
+73 -51 V
+72 -19 V
+stroke
+LT0
+LC4 setrgbcolor
+LTb
+1833 4812 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (ERI)]
+] -36.7 MLshow
+LT0
+LC4 setrgbcolor
+1572 4812 M
+195 0 V
+1440 3813 M
+58 81 V
+73 152 V
+73 215 V
+72 272 V
+73 304 V
+73 -316 V
+73 -114 V
+72 0 V
+73 -196 V
+73 19 V
+72 -222 V
+73 -57 V
+73 -6 V
+73 -114 V
+72 0 V
+73 -51 V
+stroke
+LT1
+LC3 setrgbcolor
+LTb
+1833 4702 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (UOM)]
+] -36.7 MLshow
+LT1
+LC3 setrgbcolor
+1572 4702 M
+195 0 V
+1440 3794 M
+58 56 V
+73 6 V
+73 146 V
+72 266 V
+73 50 V
+73 0 V
+73 101 V
+72 216 V
+73 50 V
+73 -247 V
+72 -177 V
+73 -215 V
+73 -13 V
+73 -50 V
+72 -184 V
+55 -19 V
+stroke
+LT0
+LC2 setrgbcolor
+LTb
+1833 4592 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (PX)]
+] -36.7 MLshow
+LT0
+LC2 setrgbcolor
+1572 4592 M
+195 0 V
+1440 3799 M
+58 25 V
+73 203 V
+73 51 V
+72 158 V
+73 152 V
+73 221 V
+73 -25 V
+72 -101 V
+73 6 V
+73 -107 V
+72 -76 V
+73 -260 V
+73 -171 V
+73 -51 V
+63 -44 V
+stroke
+LT0
+LC1 setrgbcolor
+LTb
+1833 4482 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (NOAH)]
+] -36.7 MLshow
+LT0
+LC1 setrgbcolor
+1572 4482 M
+195 0 V
+1440 3800 M
+58 81 V
+73 121 V
+73 133 V
+72 278 V
+73 196 V
+73 -240 V
+73 114 V
+72 -76 V
+73 -51 V
+73 -164 V
+72 -32 V
+73 -139 V
+73 88 V
+73 -202 V
+72 -64 V
+73 -25 V
+62 -38 V
+stroke
+LT0
+LC0 setrgbcolor
+LTb
+1833 4372 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (CSSP)]
+] -36.7 MLshow
+LT0
+LC0 setrgbcolor
+1572 4372 M
+195 0 V
+1440 3793 M
+58 50 V
+73 51 V
+73 184 V
+72 209 V
+73 170 V
+73 26 V
+73 0 V
+72 12 V
+73 76 V
+73 -202 V
+72 -152 V
+73 -171 V
+73 -63 V
+73 -108 V
+72 -25 V
+67 -70 V
+stroke
+0.200 UL
+LTb
+1440 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+1440 2767 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+1716 2520 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+1440 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT0
+0.00 0.39 0.00 C 1440 2530 M
+58 66 V
+73 196 V
+73 184 V
+72 285 V
+73 -89 V
+73 241 V
+73 0 V
+72 -89 V
+73 -215 V
+73 -241 V
+72 -82 V
+73 -139 V
+73 -64 V
+73 -25 V
+72 -25 V
+73 -13 V
+stroke
+LT0
+LC4 setrgbcolor
+1506 2520 M
+65 51 V
+73 63 V
+72 298 V
+73 354 V
+73 44 V
+73 7 V
+72 -165 V
+73 89 V
+73 -51 V
+72 -158 V
+73 -165 V
+73 -247 V
+73 -6 V
+72 -70 V
+73 -44 V
+stroke
+LT1
+LC3 setrgbcolor
+1440 2533 M
+58 50 V
+73 254 V
+73 120 V
+72 70 V
+73 126 V
+73 -69 V
+73 38 V
+72 25 V
+73 -95 V
+73 -25 V
+72 -76 V
+73 -102 V
+73 26 V
+73 -152 V
+72 -89 V
+73 -114 V
+stroke
+LT0
+LC2 setrgbcolor
+1502 2520 M
+69 120 V
+73 184 V
+72 323 V
+73 183 V
+73 228 V
+73 70 V
+72 -374 V
+73 -177 V
+73 -215 V
+72 -95 V
+73 -82 V
+73 -38 V
+73 -64 V
+72 -50 V
+49 -13 V
+stroke
+LT0
+LC1 setrgbcolor
+1440 2544 M
+58 46 V
+73 253 V
+73 215 V
+72 222 V
+73 -171 V
+73 0 V
+73 101 V
+72 44 V
+73 -227 V
+73 -45 V
+72 -221 V
+73 101 V
+73 -165 V
+73 -31 V
+72 -102 V
+64 -44 V
+stroke
+LT0
+LC0 setrgbcolor
+1440 2540 M
+58 81 V
+73 76 V
+73 222 V
+72 304 V
+73 177 V
+73 -171 V
+73 -44 V
+72 38 V
+73 -196 V
+73 -140 V
+72 -25 V
+73 -25 V
+73 -127 V
+73 -89 V
+72 -31 V
+73 -70 V
+stroke
+0.200 UL
+LTb
+1440 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+1440 1507 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+1716 1260 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+1440 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT0
+0.00 0.39 0.00 C 1440 2172 M
+58 202 V
+73 -133 V
+73 -392 V
+72 25 V
+73 -240 V
+73 -222 V
+73 -51 V
+72 -6 V
+73 -44 V
+73 -32 V
+72 6 V
+73 -6 V
+73 -19 V
+stroke
+LT0
+LC4 setrgbcolor
+1440 1968 M
+58 -309 V
+73 -32 V
+73 -126 V
+72 -64 V
+73 13 V
+73 6 V
+73 -69 V
+72 -51 V
+73 0 V
+73 0 V
+72 19 V
+73 0 V
+73 -57 V
+73 -19 V
+72 -19 V
+stroke
+LT1
+LC3 setrgbcolor
+1440 1660 M
+58 208 V
+73 19 V
+73 -95 V
+72 76 V
+73 -108 V
+73 32 V
+73 -70 V
+72 -50 V
+73 50 V
+73 -190 V
+72 19 V
+73 -171 V
+73 -82 V
+73 25 V
+72 -25 V
+73 -38 V
+stroke
+LT0
+LC2 setrgbcolor
+1440 2093 M
+58 -440 V
+73 -127 V
+73 -152 V
+72 -44 V
+73 0 V
+73 -32 V
+73 0 V
+72 -25 V
+49 -13 V
+stroke
+LT0
+LC1 setrgbcolor
+1440 1848 M
+58 146 V
+73 336 V
+73 -63 V
+72 -228 V
+73 -70 V
+73 -316 V
+73 -76 V
+72 -165 V
+73 -57 V
+73 -95 V
+72 13 V
+49 -13 V
+stroke
+LT0
+LC0 setrgbcolor
+1440 1758 M
+58 40 V
+73 222 V
+73 -102 V
+72 -120 V
+73 146 V
+73 -171 V
+73 -32 V
+72 -240 V
+73 0 V
+73 -89 V
+72 -38 V
+73 -38 V
+73 -63 V
+73 6 V
+72 0 V
+55 -19 V
+stroke
+0.200 UL
+LTb
+1440 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+1440 247 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+1716 0 M
+0 63 V
+stroke
+1716 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.2)]
+] -36.7 MCshow
+0.200 UL
+LTb
+2007 0 M
+0 63 V
+stroke
+2007 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.4)]
+] -36.7 MCshow
+0.200 UL
+LTb
+2298 0 M
+0 63 V
+stroke
+2298 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.6)]
+] -36.7 MCshow
+0.200 UL
+LTb
+2589 0 M
+0 63 V
+stroke
+2589 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.8)]
+] -36.7 MCshow
+0.200 UL
+LTb
+2880 0 M
+0 63 V
+stroke
+2880 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (1.0)]
+] -36.7 MCshow
+0.200 UL
+LTb
+0.200 UL
+LTb
+1440 1260 N
+1440 0 L
+2880 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT0
+0.00 0.39 0.00 C 1440 396 M
+58 117 V
+73 152 V
+73 69 V
+72 -107 V
+73 38 V
+73 -165 V
+73 38 V
+72 -183 V
+73 -13 V
+73 -76 V
+72 0 V
+73 -120 V
+2371 44 L
+73 -25 V
+72 6 V
+2589 0 L
+stroke
+LT0
+LC4 setrgbcolor
+1440 99 M
+58 116 V
+73 184 V
+73 266 V
+72 -26 V
+73 178 V
+73 -64 V
+73 -151 V
+72 -70 V
+73 -101 V
+73 -102 V
+72 -82 V
+73 -108 V
+73 -12 V
+73 -32 V
+72 25 V
+73 -95 V
+2662 0 L
+stroke
+LT1
+LC3 setrgbcolor
+1440 279 M
+58 152 V
+73 354 V
+73 70 V
+72 -152 V
+73 -51 V
+73 -139 V
+73 -51 V
+72 -38 V
+73 -107 V
+73 -26 V
+72 -114 V
+73 -76 V
+73 -25 V
+73 -13 V
+72 0 V
+73 -38 V
+73 0 V
+2720 0 L
+stroke
+LT0
+LC2 setrgbcolor
+1440 105 M
+58 117 V
+73 291 V
+73 316 V
+72 57 V
+73 -126 V
+73 -222 V
+73 -82 V
+72 -6 V
+73 -57 V
+73 -102 V
+72 57 V
+73 -126 V
+73 -83 V
+73 -50 V
+72 -64 V
+2575 0 L
+stroke
+LT0
+LC1 setrgbcolor
+1440 195 M
+58 71 V
+73 82 V
+73 209 V
+72 279 V
+73 120 V
+73 -19 V
+73 -203 V
+72 -284 V
+73 -19 V
+73 -178 V
+72 -82 V
+2298 70 L
+73 -57 V
+2419 0 L
+stroke
+LT0
+LC0 setrgbcolor
+1440 424 M
+58 304 V
+73 38 V
+73 -215 V
+72 -101 V
+73 25 V
+73 108 V
+73 -45 V
+72 -171 V
+73 -63 V
+73 13 V
+72 0 V
+73 -140 V
+73 -6 V
+2444 38 L
+72 0 V
+73 -25 V
+2638 0 L
+stroke
+0.200 UL
+LTb
+1440 1260 N
+1440 0 L
+2880 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+2880 4027 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+3156 3780 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+2880 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C LTb
+3273 4922 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (OROoff)]
+] -36.7 MLshow
+LT1
+0.00 0.00 0.55 C 3012 4922 M
+195 0 V
+2880 3783 M
+58 35 V
+73 38 V
+73 291 V
+72 159 V
+73 -64 V
+73 165 V
+73 139 V
+72 63 V
+73 -76 V
+73 0 V
+72 -151 V
+73 -387 V
+73 -25 V
+73 -152 V
+72 -38 V
+73 0 V
+stroke
+LT1
+0.55 0.00 0.00 C LTb
+3273 4812 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (UW)]
+] -36.7 MLshow
+LT1
+0.55 0.00 0.00 C 3012 4812 M
+195 0 V
+2880 3910 M
+58 168 V
+73 0 V
+73 44 V
+72 13 V
+73 183 V
+73 253 V
+73 45 V
+72 -76 V
+73 -298 V
+73 140 V
+72 -222 V
+73 -177 V
+73 12 V
+73 -164 V
+72 -38 V
+49 -13 V
+stroke
+LT1
+0.00 0.55 0.55 C LTb
+3273 4702 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (YSU)]
+] -36.7 MLshow
+LT1
+0.00 0.55 0.55 C 3012 4702 M
+195 0 V
+2880 3823 M
+58 20 V
+73 127 V
+73 114 V
+72 63 V
+73 247 V
+73 228 V
+73 13 V
+72 -38 V
+73 -165 V
+73 -152 V
+72 -171 V
+73 -31 V
+73 -159 V
+73 26 V
+72 -102 V
+66 -63 V
+stroke
+LT0
+0.00 0.39 0.00 C LTb
+3273 4592 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (QNSE)]
+] -36.7 MLshow
+LT0
+0.00 0.39 0.00 C 3012 4592 M
+195 0 V
+2880 3793 M
+58 50 V
+73 32 V
+73 95 V
+72 215 V
+73 355 V
+73 196 V
+70 304 V
+6 0 R
+69 -247 V
+73 -411 V
+73 -304 V
+72 -146 V
+73 70 V
+73 -70 V
+73 -114 V
+72 -19 V
+55 -19 V
+stroke
+LT0
+LC4 setrgbcolor
+LTb
+3273 4482 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (MYJ)]
+] -36.7 MLshow
+LT0
+LC4 setrgbcolor
+3012 4482 M
+195 0 V
+2880 3795 M
+58 10 V
+73 165 V
+73 57 V
+72 260 V
+73 272 V
+73 0 V
+73 190 V
+72 -32 V
+73 -222 V
+73 -386 V
+72 -50 V
+73 -114 V
+73 -19 V
+73 -70 V
+72 -6 V
+73 -70 V
+stroke
+LT1
+LC3 setrgbcolor
+LTb
+3273 4372 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (GFS)]
+] -36.7 MLshow
+LT1
+LC3 setrgbcolor
+3012 4372 M
+195 0 V
+2880 3804 M
+58 20 V
+73 102 V
+73 107 V
+72 159 V
+73 -19 V
+73 164 V
+73 -44 V
+72 240 V
+73 38 V
+73 -152 V
+72 -25 V
+73 -31 V
+73 -266 V
+73 -203 V
+72 -63 V
+73 -32 V
+55 -19 V
+stroke
+LT0
+LC2 setrgbcolor
+LTb
+3273 4262 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (BouLac)]
+] -36.7 MLshow
+LT0
+LC2 setrgbcolor
+3012 4262 M
+195 0 V
+2880 3790 M
+58 41 V
+73 50 V
+73 178 V
+72 158 V
+73 114 V
+73 177 V
+73 -145 V
+72 132 V
+73 266 V
+73 -215 V
+72 -329 V
+73 -209 V
+73 -32 V
+73 -69 V
+72 -108 V
+73 -6 V
+49 -13 V
+stroke
+LT0
+LC1 setrgbcolor
+LTb
+3273 4152 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (ACM)]
+] -36.7 MLshow
+LT0
+LC1 setrgbcolor
+3012 4152 M
+195 0 V
+2880 3804 M
+58 20 V
+73 108 V
+73 241 V
+72 -102 V
+73 247 V
+73 101 V
+73 152 V
+72 127 V
+73 -215 V
+73 -38 V
+72 -139 V
+73 -178 V
+73 -202 V
+73 -83 V
+66 -63 V
+stroke
+LT0
+LC0 setrgbcolor
+LTb
+3273 4042 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (CAM)]
+] -36.7 MLshow
+LT0
+LC0 setrgbcolor
+3012 4042 M
+195 0 V
+2880 3793 M
+58 50 V
+73 51 V
+73 184 V
+72 209 V
+73 170 V
+73 26 V
+73 0 V
+72 12 V
+73 76 V
+73 -202 V
+72 -152 V
+73 -171 V
+73 -63 V
+73 -108 V
+72 -25 V
+67 -70 V
+stroke
+0.200 UL
+LTb
+2880 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+2880 2767 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+3156 2520 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+2880 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 2880 2520 M
+58 25 V
+73 19 V
+73 152 V
+72 102 V
+73 335 V
+73 247 V
+73 158 V
+72 -126 V
+73 -76 V
+73 -304 V
+72 -57 V
+73 -298 V
+73 -88 V
+73 12 V
+72 -101 V
+stroke
+LT1
+0.55 0.00 0.00 C 2953 2520 M
+58 25 V
+73 165 V
+72 234 V
+73 159 V
+73 151 V
+73 83 V
+72 120 V
+73 -196 V
+73 -89 V
+72 -329 V
+73 -44 V
+73 -114 V
+73 6 V
+72 -32 V
+73 -76 V
+66 -63 V
+stroke
+LT1
+0.00 0.55 0.55 C 2880 2525 M
+58 20 V
+73 45 V
+73 82 V
+72 260 V
+73 227 V
+73 152 V
+73 247 V
+72 -234 V
+73 -177 V
+73 -177 V
+72 -203 V
+73 127 V
+73 -152 V
+73 -32 V
+72 -44 V
+73 -108 V
+62 -38 V
+stroke
+LT0
+0.00 0.39 0.00 C 2880 2578 M
+58 81 V
+73 228 V
+73 386 V
+72 254 V
+73 -51 V
+73 0 V
+73 -127 V
+72 -278 V
+73 -196 V
+73 -203 V
+72 -63 V
+73 -45 V
+73 -25 V
+73 -19 V
+stroke
+LT0
+LC4 setrgbcolor
+2880 2545 M
+58 51 V
+73 25 V
+73 140 V
+72 247 V
+73 227 V
+73 178 V
+73 76 V
+72 -89 V
+73 -278 V
+73 -165 V
+72 -38 V
+73 -203 V
+73 -76 V
+73 -76 V
+72 -6 V
+73 -25 V
+49 -13 V
+stroke
+LT1
+LC3 setrgbcolor
+2880 2534 M
+58 5 V
+73 82 V
+73 247 V
+72 254 V
+73 -51 V
+73 266 V
+73 88 V
+72 -215 V
+73 -76 V
+73 -152 V
+72 -69 V
+73 -121 V
+73 -82 V
+73 -89 V
+72 -12 V
+73 -26 V
+66 -63 V
+stroke
+LT0
+LC2 setrgbcolor
+2938 2520 M
+73 266 V
+73 101 V
+72 83 V
+73 335 V
+73 76 V
+73 -133 V
+72 -171 V
+73 -145 V
+73 -133 V
+72 38 V
+73 215 V
+73 -127 V
+73 -291 V
+72 -38 V
+73 13 V
+68 -89 V
+stroke
+LT0
+LC1 setrgbcolor
+2938 2520 M
+73 44 V
+73 222 V
+72 260 V
+73 177 V
+73 133 V
+73 107 V
+72 -101 V
+73 -266 V
+73 7 V
+72 -342 V
+73 12 V
+73 -101 V
+73 -76 V
+72 70 V
+73 -121 V
+73 -12 V
+48 -13 V
+stroke
+LT0
+LC0 setrgbcolor
+2880 2540 M
+58 81 V
+73 76 V
+73 222 V
+72 304 V
+73 177 V
+73 -171 V
+73 -44 V
+72 38 V
+73 -196 V
+73 -140 V
+72 -25 V
+73 -25 V
+73 -127 V
+73 -89 V
+72 -31 V
+73 -70 V
+stroke
+0.200 UL
+LTb
+2880 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+2880 1507 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+3156 1260 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+2880 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 2880 1950 M
+58 51 V
+73 95 V
+73 -197 V
+72 -158 V
+73 -25 V
+73 -158 V
+73 0 V
+72 -146 V
+73 114 V
+73 -95 V
+72 44 V
+73 -120 V
+73 32 V
+73 -7 V
+72 -25 V
+73 -44 V
+65 -51 V
+stroke
+LT1
+0.55 0.00 0.00 C 2880 1553 M
+58 -21 V
+73 108 V
+73 158 V
+72 120 V
+73 -132 V
+73 -19 V
+73 -102 V
+72 0 V
+73 0 V
+73 -63 V
+72 -51 V
+73 -95 V
+73 0 V
+73 -76 V
+72 -31 V
+73 -76 V
+73 0 V
+48 -13 V
+stroke
+LT1
+0.00 0.55 0.55 C 2880 1878 M
+58 15 V
+73 25 V
+73 -202 V
+72 -32 V
+73 83 V
+73 234 V
+73 -102 V
+72 -240 V
+73 -120 V
+73 -114 V
+72 -51 V
+73 -70 V
+73 -31 V
+73 -13 V
+72 0 V
+73 0 V
+stroke
+LT0
+0.00 0.39 0.00 C 2884 2520 M
+54 -266 V
+73 -355 V
+73 -183 V
+72 -285 V
+73 -32 V
+73 0 V
+73 -95 V
+72 -44 V
+73 19 V
+55 -19 V
+stroke
+LT0
+LC4 setrgbcolor
+2880 2263 M
+58 -167 V
+73 -178 V
+73 -151 V
+72 -254 V
+73 -25 V
+73 -165 V
+73 -38 V
+72 0 V
+73 13 V
+73 -25 V
+72 -13 V
+73 0 V
+stroke
+LT1
+LC3 setrgbcolor
+2880 2219 M
+58 -92 V
+73 45 V
+73 -279 V
+72 -133 V
+73 -120 V
+73 -127 V
+73 -107 V
+72 44 V
+73 -95 V
+73 -51 V
+72 7 V
+73 -26 V
+73 -6 V
+73 6 V
+58 -25 V
+stroke
+LT0
+LC2 setrgbcolor
+2880 1740 M
+58 172 V
+73 38 V
+73 -209 V
+72 -152 V
+73 -101 V
+73 253 V
+73 -69 V
+72 50 V
+73 -50 V
+73 -13 V
+72 -120 V
+73 -57 V
+73 -45 V
+73 -57 V
+72 -82 V
+73 -38 V
+73 0 V
+stroke
+LT0
+LC1 setrgbcolor
+2880 2221 M
+58 71 V
+73 -76 V
+73 -139 V
+72 -304 V
+73 63 V
+73 -253 V
+73 -133 V
+72 -25 V
+73 -114 V
+73 -26 V
+72 -25 V
+stroke
+LT0
+LC0 setrgbcolor
+2880 1758 M
+58 40 V
+73 222 V
+73 -102 V
+72 -120 V
+73 146 V
+73 -171 V
+73 -32 V
+72 -240 V
+73 0 V
+73 -89 V
+72 -38 V
+73 -38 V
+73 -63 V
+73 6 V
+72 0 V
+55 -19 V
+stroke
+0.200 UL
+LTb
+2880 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+2880 247 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+3156 0 M
+0 63 V
+stroke
+3156 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.2)]
+] -36.7 MCshow
+0.200 UL
+LTb
+3447 0 M
+0 63 V
+stroke
+3447 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.4)]
+] -36.7 MCshow
+0.200 UL
+LTb
+3738 0 M
+0 63 V
+stroke
+3738 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.6)]
+] -36.7 MCshow
+0.200 UL
+LTb
+4029 0 M
+0 63 V
+stroke
+4029 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.8)]
+] -36.7 MCshow
+0.200 UL
+LTb
+4320 0 M
+0 63 V
+stroke
+4320 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (1.0)]
+] -36.7 MCshow
+0.200 UL
+LTb
+0.200 UL
+LTb
+2880 1260 N
+2880 0 L
+4320 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 2880 119 M
+58 223 V
+73 222 V
+73 75 V
+72 -56 V
+73 246 V
+73 0 V
+73 -215 V
+72 -133 V
+73 -209 V
+73 -69 V
+72 -7 V
+73 -50 V
+73 44 V
+73 -63 V
+72 -13 V
+73 -95 V
+73 -6 V
+4150 0 L
+stroke
+LT1
+0.55 0.00 0.00 C 2880 189 M
+58 273 V
+73 222 V
+73 44 V
+72 -19 V
+73 25 V
+73 -208 V
+73 -26 V
+72 -76 V
+73 38 V
+73 -158 V
+72 -63 V
+73 -19 V
+3811 95 L
+73 -76 V
+3938 0 L
+stroke
+LT1
+0.00 0.55 0.55 C 2880 314 M
+58 142 V
+73 -63 V
+73 246 V
+72 190 V
+73 -278 V
+73 -89 V
+73 -63 V
+72 6 V
+73 32 V
+73 -95 V
+72 -51 V
+73 7 V
+73 -108 V
+3884 63 L
+72 -44 V
+73 6 V
+4087 0 L
+stroke
+LT0
+0.00 0.39 0.00 C 2880 381 M
+58 208 V
+73 -25 V
+73 101 V
+72 114 V
+73 -171 V
+73 69 V
+73 -170 V
+72 -32 V
+73 -108 V
+73 -95 V
+72 -145 V
+73 -64 V
+73 -44 V
+73 -6 V
+3932 0 L
+stroke
+LT0
+LC4 setrgbcolor
+2880 320 M
+58 168 V
+73 189 V
+73 64 V
+72 -7 V
+73 146 V
+73 -304 V
+73 -101 V
+72 -171 V
+73 -51 V
+73 -50 V
+72 -64 V
+73 -12 V
+73 0 V
+73 -32 V
+72 6 V
+4025 0 L
+stroke
+LT1
+LC3 setrgbcolor
+2880 192 M
+58 87 V
+73 63 V
+73 95 V
+72 165 V
+73 75 V
+73 64 V
+73 -76 V
+72 -203 V
+73 0 V
+73 -31 V
+72 -38 V
+73 -64 V
+3811 63 L
+73 13 V
+72 -51 V
+4015 0 L
+stroke
+LT0
+LC2 setrgbcolor
+2880 294 M
+58 263 V
+73 51 V
+73 6 V
+72 190 V
+73 -171 V
+73 -69 V
+73 -184 V
+72 32 V
+73 -140 V
+73 -31 V
+72 57 V
+73 -76 V
+73 -83 V
+73 38 V
+3956 51 L
+4029 0 L
+stroke
+LT0
+LC1 setrgbcolor
+2880 410 M
+58 71 V
+73 146 V
+73 -114 V
+72 126 V
+73 165 V
+73 -165 V
+73 -189 V
+72 12 V
+73 -164 V
+73 6 V
+72 -108 V
+73 -57 V
+73 -38 V
+73 -57 V
+72 -25 V
+4029 0 L
+stroke
+LT0
+LC0 setrgbcolor
+2880 424 M
+58 304 V
+73 38 V
+73 -215 V
+72 -101 V
+73 25 V
+73 108 V
+73 -45 V
+72 -171 V
+73 -63 V
+73 13 V
+72 0 V
+73 -140 V
+73 -6 V
+3884 38 L
+72 0 V
+73 -25 V
+4078 0 L
+stroke
+0.200 UL
+LTb
+2880 1260 N
+2880 0 L
+4320 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+4320 4027 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+4596 3780 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+4320 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C LTb
+4713 4922 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (SCUoff)]
+] -36.7 MLshow
+LT1
+0.00 0.00 0.55 C 4452 4922 M
+195 0 V
+4320 3798 M
+58 20 V
+73 13 V
+73 266 V
+72 120 V
+73 165 V
+73 -89 V
+73 240 V
+72 -44 V
+73 355 V
+73 -387 V
+72 -272 V
+73 -133 V
+73 0 V
+73 -177 V
+72 -76 V
+55 -19 V
+stroke
+LT1
+0.55 0.00 0.00 C LTb
+4713 4812 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (NKF)]
+] -36.7 MLshow
+LT1
+0.55 0.00 0.00 C 4452 4812 M
+195 0 V
+4320 3798 M
+58 96 V
+73 253 V
+73 222 V
+72 88 V
+73 -75 V
+73 50 V
+73 -38 V
+72 -38 V
+73 -44 V
+73 -32 V
+72 -158 V
+73 -120 V
+73 82 V
+73 -158 V
+72 -133 V
+49 -13 V
+stroke
+LT1
+0.00 0.55 0.55 C LTb
+4713 4702 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (ZML)]
+] -36.7 MLshow
+LT1
+0.00 0.55 0.55 C 4452 4702 M
+195 0 V
+4320 3809 M
+58 66 V
+73 304 V
+73 259 V
+72 -6 V
+73 -164 V
+73 44 V
+73 177 V
+72 -152 V
+73 82 V
+73 -113 V
+72 -133 V
+73 -89 V
+73 -101 V
+73 -152 V
+64 -51 V
+stroke
+LT0
+0.00 0.39 0.00 C LTb
+4713 4592 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (MIT)]
+] -36.7 MLshow
+LT0
+0.00 0.39 0.00 C 4452 4592 M
+195 0 V
+4320 3856 M
+58 152 V
+73 70 V
+73 202 V
+72 76 V
+73 32 V
+73 107 V
+73 -76 V
+72 -126 V
+73 13 V
+73 -89 V
+72 -63 V
+73 -51 V
+73 -57 V
+73 -127 V
+72 -88 V
+65 -51 V
+stroke
+LT0
+LC4 setrgbcolor
+LTb
+4713 4482 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (GFDL)]
+] -36.7 MLshow
+LT0
+LC4 setrgbcolor
+4452 4482 M
+195 0 V
+4320 3828 M
+58 91 V
+73 152 V
+73 235 V
+72 50 V
+73 0 V
+73 26 V
+73 107 V
+72 -177 V
+73 -70 V
+73 -82 V
+72 -6 V
+73 133 V
+73 -159 V
+73 -247 V
+72 -50 V
+73 -38 V
+49 -13 V
+stroke
+LT1
+LC3 setrgbcolor
+LTb
+4713 4372 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (GD)]
+] -36.7 MLshow
+LT1
+LC3 setrgbcolor
+4452 4372 M
+195 0 V
+4320 3798 M
+58 71 V
+73 164 V
+73 51 V
+72 253 V
+73 120 V
+73 83 V
+73 -108 V
+72 -69 V
+73 -76 V
+73 -70 V
+72 -139 V
+73 158 V
+73 -63 V
+73 -171 V
+72 -184 V
+63 -38 V
+stroke
+LT0
+LC2 setrgbcolor
+LTb
+4713 4262 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (CSU)]
+] -36.7 MLshow
+LT0
+LC2 setrgbcolor
+4452 4262 M
+195 0 V
+4320 3784 M
+58 40 V
+73 209 V
+73 102 V
+72 50 V
+73 121 V
+73 164 V
+73 -76 V
+72 317 V
+73 -152 V
+73 -253 V
+72 -102 V
+73 -133 V
+73 -101 V
+73 -89 V
+72 -31 V
+73 -32 V
+62 -38 V
+stroke
+LT0
+LC1 setrgbcolor
+LTb
+4713 4152 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (BMJ)]
+] -36.7 MLshow
+LT0
+LC1 setrgbcolor
+4452 4152 M
+195 0 V
+4320 3823 M
+58 122 V
+73 139 V
+73 177 V
+72 228 V
+73 171 V
+73 -127 V
+73 64 V
+72 -114 V
+73 -203 V
+73 -177 V
+72 -133 V
+73 51 V
+73 -140 V
+73 -57 V
+72 -31 V
+49 -13 V
+stroke
+LT0
+LC0 setrgbcolor
+LTb
+4713 4042 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (ECP)]
+] -36.7 MLshow
+LT0
+LC0 setrgbcolor
+4452 4042 M
+195 0 V
+4320 3793 M
+58 50 V
+73 51 V
+73 184 V
+72 209 V
+73 170 V
+73 26 V
+73 0 V
+72 12 V
+73 76 V
+73 -202 V
+72 -152 V
+73 -171 V
+73 -63 V
+73 -108 V
+72 -25 V
+67 -70 V
+stroke
+0.200 UL
+LTb
+4320 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+4320 2767 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+4596 2520 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+4320 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 4320 2604 M
+58 283 V
+73 -88 V
+73 183 V
+72 -6 V
+73 95 V
+73 57 V
+73 -32 V
+72 82 V
+73 -132 V
+73 -51 V
+72 -184 V
+73 57 V
+73 0 V
+73 -209 V
+72 -69 V
+73 -7 V
+73 -63 V
+stroke
+LT1
+0.55 0.00 0.00 C 4320 2544 M
+58 -5 V
+73 70 V
+73 152 V
+72 487 V
+73 266 V
+73 -234 V
+73 19 V
+72 -38 V
+73 -102 V
+73 -202 V
+72 -146 V
+73 -63 V
+73 -76 V
+73 -89 V
+72 -44 V
+73 -6 V
+49 -13 V
+stroke
+LT1
+0.00 0.55 0.55 C 4320 2533 M
+58 50 V
+73 241 V
+73 38 V
+72 196 V
+73 146 V
+73 -108 V
+73 -69 V
+72 25 V
+73 -19 V
+73 19 V
+72 -70 V
+73 -69 V
+73 -95 V
+73 -76 V
+72 -102 V
+73 -50 V
+73 -7 V
+66 -63 V
+stroke
+LT0
+0.00 0.39 0.00 C 4320 2533 M
+58 50 V
+73 76 V
+73 285 V
+72 51 V
+73 285 V
+73 -57 V
+73 12 V
+72 -101 V
+73 -126 V
+73 -57 V
+72 133 V
+73 -197 V
+73 -114 V
+73 -101 V
+72 -108 V
+73 -25 V
+73 -19 V
+stroke
+LT0
+LC4 setrgbcolor
+4320 2545 M
+58 26 V
+73 44 V
+73 209 V
+72 272 V
+73 234 V
+73 -76 V
+73 -151 V
+72 25 V
+73 -76 V
+73 -101 V
+72 25 V
+73 0 V
+73 -215 V
+73 -95 V
+72 -70 V
+73 13 V
+73 -76 V
+48 -13 V
+stroke
+LT1
+LC3 setrgbcolor
+4320 2555 M
+58 92 V
+73 120 V
+73 234 V
+72 228 V
+73 171 V
+73 -44 V
+73 -51 V
+72 -202 V
+73 -32 V
+73 -114 V
+72 -158 V
+73 -140 V
+73 -38 V
+73 -50 V
+72 -38 V
+49 -13 V
+stroke
+LT0
+LC2 setrgbcolor
+4320 2574 M
+58 168 V
+73 -19 V
+73 354 V
+72 177 V
+73 -25 V
+73 82 V
+73 -101 V
+72 -139 V
+73 -146 V
+73 -63 V
+72 -101 V
+73 50 V
+73 51 V
+73 -241 V
+72 -63 V
+73 -38 V
+stroke
+LT0
+LC1 setrgbcolor
+4320 2529 M
+58 61 V
+73 57 V
+73 139 V
+72 373 V
+73 342 V
+73 -101 V
+73 89 V
+72 -241 V
+73 -240 V
+73 -146 V
+72 -25 V
+73 -165 V
+73 -57 V
+73 -19 V
+72 -13 V
+73 -25 V
+73 -38 V
+stroke
+LT0
+LC0 setrgbcolor
+4320 2540 M
+58 81 V
+73 76 V
+73 222 V
+72 304 V
+73 177 V
+73 -171 V
+73 -44 V
+72 38 V
+73 -196 V
+73 -140 V
+72 -25 V
+73 -25 V
+73 -127 V
+73 -89 V
+72 -31 V
+73 -70 V
+stroke
+0.200 UL
+LTb
+4320 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+4320 1507 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+4596 1260 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+4320 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 4320 1965 M
+58 -91 V
+73 25 V
+73 -177 V
+72 -6 V
+73 -127 V
+73 13 V
+73 -95 V
+72 108 V
+73 -51 V
+73 -32 V
+72 26 V
+73 -203 V
+73 101 V
+73 -6 V
+72 -127 V
+73 -38 V
+73 -25 V
+stroke
+LT1
+0.55 0.00 0.00 C 4320 2236 M
+58 -172 V
+73 114 V
+73 -405 V
+72 -146 V
+73 -63 V
+73 -101 V
+73 -64 V
+72 -12 V
+73 -13 V
+73 13 V
+72 -38 V
+73 -45 V
+73 -25 V
+73 6 V
+72 -25 V
+stroke
+LT1
+0.00 0.55 0.55 C 4320 1986 M
+58 -137 V
+73 126 V
+73 0 V
+72 -126 V
+73 69 V
+73 -107 V
+73 -95 V
+72 -184 V
+73 -126 V
+73 -19 V
+72 -102 V
+73 51 V
+73 -57 V
+73 -19 V
+stroke
+LT0
+0.00 0.39 0.00 C 4320 2160 M
+58 -20 V
+73 -177 V
+73 -19 V
+72 -127 V
+73 -145 V
+73 -114 V
+73 -95 V
+72 -32 V
+73 -127 V
+73 51 V
+72 -32 V
+73 -25 V
+73 -38 V
+73 19 V
+72 0 V
+55 -19 V
+stroke
+LT0
+LC4 setrgbcolor
+4320 2264 M
+58 142 V
+73 -152 V
+73 -317 V
+72 -227 V
+73 -45 V
+73 -177 V
+73 -63 V
+72 -70 V
+73 -51 V
+73 -25 V
+54 -19 V
+237 0 R
+stroke
+LT1
+LC3 setrgbcolor
+4320 1978 M
+58 162 V
+73 -89 V
+73 -208 V
+72 -203 V
+73 -76 V
+73 -32 V
+73 -50 V
+72 -26 V
+73 -69 V
+73 38 V
+72 -19 V
+73 -57 V
+73 0 V
+73 -64 V
+72 26 V
+73 -13 V
+62 -38 V
+stroke
+LT0
+LC2 setrgbcolor
+4320 2120 M
+58 -5 V
+73 63 V
+73 -279 V
+72 -75 V
+73 -165 V
+73 -76 V
+73 -76 V
+72 -146 V
+73 51 V
+73 25 V
+72 -31 V
+73 -102 V
+73 -25 V
+73 25 V
+72 -31 V
+49 -13 V
+stroke
+LT0
+LC1 setrgbcolor
+4320 1623 M
+58 137 V
+73 26 V
+73 76 V
+72 56 V
+73 -158 V
+73 -25 V
+73 -38 V
+72 0 V
+73 -13 V
+73 -69 V
+72 -83 V
+73 -95 V
+73 -38 V
+73 -12 V
+72 -38 V
+73 -64 V
+73 -12 V
+48 -13 V
+stroke
+LT0
+LC0 setrgbcolor
+4320 1758 M
+58 40 V
+73 222 V
+73 -102 V
+72 -120 V
+73 146 V
+73 -171 V
+73 -32 V
+72 -240 V
+73 0 V
+73 -89 V
+72 -38 V
+73 -38 V
+73 -63 V
+73 6 V
+72 0 V
+55 -19 V
+stroke
+0.200 UL
+LTb
+4320 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+4320 247 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+4596 0 M
+0 63 V
+stroke
+4596 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.2)]
+] -36.7 MCshow
+0.200 UL
+LTb
+4887 0 M
+0 63 V
+stroke
+4887 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.4)]
+] -36.7 MCshow
+0.200 UL
+LTb
+5178 0 M
+0 63 V
+stroke
+5178 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.6)]
+] -36.7 MCshow
+0.200 UL
+LTb
+5469 0 M
+0 63 V
+stroke
+5469 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.8)]
+] -36.7 MCshow
+0.200 UL
+LTb
+5760 0 M
+0 63 V
+stroke
+5760 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (1.0)]
+] -36.7 MCshow
+0.200 UL
+LTb
+0.200 UL
+LTb
+4320 1260 N
+4320 0 L
+5760 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.00 0.00 0.55 C 4320 313 M
+58 162 V
+73 278 V
+73 32 V
+72 -95 V
+73 -51 V
+73 -63 V
+73 -139 V
+72 -25 V
+73 -133 V
+73 -51 V
+72 -57 V
+73 -6 V
+73 -26 V
+73 -69 V
+72 -32 V
+5469 0 L
+stroke
+LT1
+0.55 0.00 0.00 C 4320 305 M
+58 157 V
+73 348 V
+73 83 V
+72 95 V
+73 -222 V
+73 -127 V
+73 -183 V
+72 -89 V
+73 -139 V
+73 -63 V
+72 -70 V
+73 -57 V
+5251 0 L
+stroke
+LT1
+0.00 0.55 0.55 C 4320 593 M
+58 -36 V
+73 95 V
+73 -139 V
+72 70 V
+73 19 V
+73 -121 V
+73 -82 V
+72 32 V
+73 -133 V
+73 -76 V
+72 -83 V
+73 26 V
+73 -76 V
+73 -38 V
+72 -13 V
+5469 0 L
+stroke
+LT0
+0.00 0.39 0.00 C 4320 456 M
+58 -25 V
+73 44 V
+73 0 V
+72 209 V
+73 31 V
+73 -12 V
+73 -120 V
+72 -76 V
+73 -114 V
+73 -76 V
+72 -178 V
+73 -76 V
+73 -50 V
+5299 0 L
+stroke
+LT0
+LC4 setrgbcolor
+4320 447 M
+58 66 V
+73 -76 V
+73 0 V
+72 101 V
+73 -50 V
+73 139 V
+73 -19 V
+72 -108 V
+73 -38 V
+73 -171 V
+72 -69 V
+73 -95 V
+73 -51 V
+73 -57 V
+72 19 V
+5459 0 L
+stroke
+LT1
+LC3 setrgbcolor
+4320 282 M
+58 168 V
+73 82 V
+73 297 V
+72 -25 V
+73 57 V
+73 -158 V
+73 -279 V
+72 -25 V
+73 0 V
+73 -184 V
+72 -50 V
+73 -45 V
+73 -76 V
+5324 0 L
+72 13 V
+5445 0 L
+stroke
+LT0
+LC2 setrgbcolor
+4320 432 M
+58 334 V
+73 374 V
+73 -247 V
+72 63 V
+73 -247 V
+73 -386 V
+73 -6 V
+72 -114 V
+4960 89 L
+73 -13 V
+72 -25 V
+73 12 V
+73 0 V
+73 -44 V
+5396 0 L
+stroke
+LT0
+LC1 setrgbcolor
+4320 736 M
+58 81 V
+73 50 V
+73 -63 V
+72 -215 V
+73 -63 V
+73 -133 V
+73 12 V
+72 -88 V
+73 -26 V
+73 -139 V
+72 -76 V
+73 -57 V
+5251 0 L
+stroke
+LT0
+LC0 setrgbcolor
+4320 424 M
+58 304 V
+73 38 V
+73 -215 V
+72 -101 V
+73 25 V
+73 108 V
+73 -45 V
+72 -171 V
+73 -63 V
+73 13 V
+72 0 V
+73 -140 V
+73 -6 V
+5324 38 L
+72 0 V
+73 -25 V
+5518 0 L
+stroke
+0.200 UL
+LTb
+4320 1260 N
+4320 0 L
+5760 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+5760 4027 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+6036 3780 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+5760 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.55 0.00 0.00 C LTb
+6153 4922 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (Zhao)]
+] -36.7 MLshow
+LT1
+0.55 0.00 0.00 C 5892 4922 M
+195 0 V
+5760 3784 M
+58 40 V
+73 311 V
+73 57 V
+72 190 V
+73 -121 V
+73 45 V
+73 -64 V
+72 146 V
+73 -25 V
+73 329 V
+72 -399 V
+73 -196 V
+73 -178 V
+73 76 V
+72 -152 V
+66 -63 V
+stroke
+LT1
+0.00 0.55 0.55 C LTb
+6153 4812 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (WSM5)]
+] -36.7 MLshow
+LT1
+0.00 0.55 0.55 C 5892 4812 M
+195 0 V
+5760 3785 M
+58 20 V
+73 228 V
+73 -12 V
+72 221 V
+73 64 V
+73 82 V
+73 76 V
+72 31 V
+73 19 V
+73 -132 V
+72 -127 V
+73 -82 V
+73 -51 V
+73 -190 V
+72 -133 V
+55 -19 V
+stroke
+LT0
+0.00 0.39 0.00 C LTb
+6153 4702 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (WSM6)]
+] -36.7 MLshow
+LT0
+0.00 0.39 0.00 C 5892 4702 M
+195 0 V
+5760 3794 M
+58 5 V
+73 285 V
+73 51 V
+72 -13 V
+73 133 V
+73 335 V
+73 -177 V
+72 222 V
+73 -64 V
+73 -310 V
+72 -69 V
+73 -114 V
+73 -108 V
+73 6 V
+72 -145 V
+73 -51 V
+stroke
+LT0
+LC4 setrgbcolor
+LTb
+6153 4592 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (WDM6)]
+] -36.7 MLshow
+LT0
+LC4 setrgbcolor
+5892 4592 M
+195 0 V
+5760 3795 M
+58 61 V
+73 139 V
+73 285 V
+72 -38 V
+73 146 V
+73 -6 V
+73 164 V
+72 76 V
+73 -89 V
+73 -322 V
+72 -32 V
+73 -133 V
+73 -127 V
+73 -44 V
+72 -32 V
+73 -50 V
+49 -13 V
+stroke
+LT1
+LC3 setrgbcolor
+LTb
+6153 4482 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (Tao)]
+] -36.7 MLshow
+LT1
+LC3 setrgbcolor
+5892 4482 M
+195 0 V
+5760 3815 M
+58 66 V
+73 431 V
+73 405 V
+72 266 V
+73 19 V
+73 -513 V
+73 -247 V
+72 19 V
+73 -202 V
+73 -133 V
+72 -51 V
+73 -57 V
+63 -38 V
+stroke
+LT0
+LC2 setrgbcolor
+LTb
+6153 4372 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (Morrison)]
+] -36.7 MLshow
+LT0
+LC2 setrgbcolor
+5892 4372 M
+195 0 V
+5760 3788 M
+58 55 V
+73 83 V
+73 57 V
+72 259 V
+73 64 V
+73 278 V
+73 108 V
+72 -171 V
+73 50 V
+73 -126 V
+72 -215 V
+73 -222 V
+73 -82 V
+73 -102 V
+72 7 V
+65 -51 V
+stroke
+LT0
+LC1 setrgbcolor
+LTb
+6153 4262 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (Lin)]
+] -36.7 MLshow
+LT0
+LC1 setrgbcolor
+5892 4262 M
+195 0 V
+5764 3780 M
+54 19 V
+73 127 V
+73 228 V
+72 -51 V
+73 215 V
+73 190 V
+73 133 V
+72 -108 V
+73 76 V
+73 -171 V
+72 -291 V
+73 -152 V
+73 -69 V
+73 44 V
+72 -89 V
+69 -101 V
+stroke
+LT0
+LC0 setrgbcolor
+LTb
+6153 4152 M
+[ [(Times-Roman) 110.0 0.0 true true 0 (Thompson)]
+] -36.7 MLshow
+LT0
+LC0 setrgbcolor
+5892 4152 M
+195 0 V
+5760 3793 M
+58 50 V
+73 51 V
+73 184 V
+72 209 V
+73 170 V
+73 26 V
+73 0 V
+72 12 V
+73 76 V
+73 -202 V
+72 -152 V
+73 -171 V
+73 -63 V
+73 -108 V
+72 -25 V
+67 -70 V
+stroke
+0.200 UL
+LTb
+5760 5040 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+5760 2767 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+6036 2520 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+5760 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.55 0.00 0.00 C 5760 2558 M
+58 101 V
+73 235 V
+73 133 V
+72 6 V
+73 228 V
+73 63 V
+73 -228 V
+72 -25 V
+73 -38 V
+73 -76 V
+72 -32 V
+73 -76 V
+73 -139 V
+73 -127 V
+72 -38 V
+73 19 V
+64 -44 V
+stroke
+LT1
+0.00 0.55 0.55 C 5760 2520 M
+58 25 V
+73 102 V
+73 196 V
+72 291 V
+73 -12 V
+73 240 V
+73 -177 V
+72 12 V
+73 -164 V
+73 -63 V
+72 -70 V
+73 70 V
+73 -178 V
+73 0 V
+72 -253 V
+55 -19 V
+stroke
+LT0
+0.00 0.39 0.00 C 5822 2520 M
+69 101 V
+73 146 V
+72 513 V
+73 -76 V
+73 145 V
+73 -38 V
+72 -101 V
+73 -32 V
+73 -208 V
+72 -19 V
+73 -165 V
+73 -101 V
+73 -64 V
+72 -38 V
+73 -63 V
+stroke
+LT0
+LC4 setrgbcolor
+5760 2573 M
+58 36 V
+73 88 V
+73 190 V
+72 222 V
+73 196 V
+73 0 V
+73 19 V
+72 0 V
+73 -316 V
+73 -140 V
+72 -126 V
+73 44 V
+73 -25 V
+73 -95 V
+72 -83 V
+73 -44 V
+55 -19 V
+stroke
+LT1
+LC3 setrgbcolor
+5760 3092 M
+58 340 V
+73 76 V
+73 -228 V
+72 57 V
+73 38 V
+73 -146 V
+73 -386 V
+72 -101 V
+73 -184 V
+73 -38 V
+stroke
+LT0
+LC2 setrgbcolor
+5818 2520 M
+73 139 V
+73 273 V
+72 227 V
+73 279 V
+73 38 V
+73 -304 V
+72 -44 V
+73 -95 V
+73 -89 V
+72 -171 V
+73 -50 V
+73 -26 V
+73 13 V
+72 -63 V
+73 -114 V
+49 -13 V
+stroke
+LT0
+LC1 setrgbcolor
+5760 2543 M
+58 91 V
+73 184 V
+73 19 V
+72 57 V
+73 190 V
+73 94 V
+73 -6 V
+72 63 V
+73 38 V
+73 -227 V
+72 -70 V
+73 -203 V
+73 0 V
+73 -50 V
+72 -133 V
+73 -51 V
+55 -19 V
+stroke
+LT0
+LC0 setrgbcolor
+5760 2540 M
+58 81 V
+73 76 V
+73 222 V
+72 304 V
+73 177 V
+73 -171 V
+73 -44 V
+72 38 V
+73 -196 V
+73 -140 V
+72 -25 V
+73 -25 V
+73 -127 V
+73 -89 V
+72 -31 V
+73 -70 V
+stroke
+0.200 UL
+LTb
+5760 3780 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+5760 1507 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+6036 1260 M
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+291 -63 R
+0 63 V
+stroke
+5760 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.55 0.00 0.00 C 5760 1879 M
+58 46 V
+73 -38 V
+73 -228 V
+72 57 V
+73 -165 V
+73 38 V
+73 13 V
+72 -76 V
+73 133 V
+73 13 V
+72 -140 V
+73 -76 V
+73 -6 V
+73 -120 V
+72 -19 V
+73 -13 V
+73 -19 V
+54 -19 V
+stroke
+LT1
+0.00 0.55 0.55 C 5760 2074 M
+58 -86 V
+73 -152 V
+73 209 V
+72 -196 V
+73 -6 V
+73 -254 V
+73 -31 V
+72 -95 V
+73 -102 V
+73 -25 V
+72 -32 V
+73 0 V
+73 -31 V
+73 0 V
+72 0 V
+49 -13 V
+stroke
+LT0
+0.00 0.39 0.00 C 5760 1691 M
+58 152 V
+73 -7 V
+73 76 V
+72 -38 V
+73 101 V
+73 -113 V
+73 -70 V
+72 -139 V
+73 -102 V
+73 -69 V
+72 -83 V
+73 -25 V
+73 -70 V
+73 -25 V
+72 -19 V
+73 13 V
+49 -13 V
+stroke
+LT0
+LC4 setrgbcolor
+5760 1788 M
+58 162 V
+73 38 V
+73 -253 V
+72 32 V
+73 -203 V
+73 19 V
+73 19 V
+72 82 V
+73 -57 V
+73 -25 V
+72 -127 V
+73 -12 V
+73 -165 V
+73 32 V
+72 -26 V
+73 -31 V
+73 -13 V
+stroke
+LT1
+LC3 setrgbcolor
+5760 2414 M
+58 -299 V
+73 -323 V
+73 -304 V
+72 -133 V
+73 -70 V
+73 -25 V
+stroke
+LT0
+LC2 setrgbcolor
+5760 2340 M
+58 -10 V
+73 -209 V
+73 -247 V
+72 -107 V
+73 31 V
+73 -196 V
+73 -127 V
+72 -44 V
+73 -95 V
+73 -6 V
+72 -26 V
+73 -19 V
+73 -6 V
+73 19 V
+72 -38 V
+stroke
+LT0
+LC1 setrgbcolor
+5760 1818 M
+58 107 V
+73 228 V
+73 304 V
+72 -330 V
+73 -139 V
+73 -386 V
+73 -127 V
+72 -114 V
+73 19 V
+73 0 V
+72 -69 V
+73 -13 V
+73 0 V
+73 -38 V
+72 13 V
+73 -13 V
+stroke
+LT0
+LC0 setrgbcolor
+5760 1758 M
+58 40 V
+73 222 V
+73 -102 V
+72 -120 V
+73 146 V
+73 -171 V
+73 -32 V
+72 -240 V
+73 0 V
+73 -89 V
+72 -38 V
+73 -38 V
+73 -63 V
+73 6 V
+72 0 V
+55 -19 V
+stroke
+0.200 UL
+LTb
+5760 2520 N
+0 -1260 V
+1440 0 V
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color true and { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+0.200 UL
+LTb
+5760 247 M
+63 0 V
+-63 253 R
+63 0 V
+-63 253 R
+63 0 V
+-63 254 R
+63 0 V
+-63 253 R
+63 0 V
+6036 0 M
+0 63 V
+stroke
+6036 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.2)]
+] -36.7 MCshow
+0.200 UL
+LTb
+6327 0 M
+0 63 V
+stroke
+6327 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.4)]
+] -36.7 MCshow
+0.200 UL
+LTb
+6618 0 M
+0 63 V
+stroke
+6618 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.6)]
+] -36.7 MCshow
+0.200 UL
+LTb
+6909 0 M
+0 63 V
+stroke
+6909 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (0.8)]
+] -36.7 MCshow
+0.200 UL
+LTb
+7200 0 M
+0 63 V
+stroke
+7200 -110 M
+[ [(Courier-Bold) 110.0 0.0 true true 0 (1.0)]
+] -36.7 MCshow
+0.200 UL
+LTb
+0.200 UL
+LTb
+5760 1260 N
+5760 0 L
+7200 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+-359 2520 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Times-Roman) 180.0 0.0 true true 0 (Spatial Frequency over Coast States \(%\))]
+] -60.0 MCshow
+grestore
+3600 -251 M
+[ [(Times-Roman) 180.0 0.0 true true 0 (Correlation Coefficient of Daily Mean Precipitation)]
+] -60.0 MCshow
+720 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (RA)]
+] -40.0 MCshow
+2160 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (SF)]
+] -40.0 MCshow
+3600 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (BL)]
+] -40.0 MCshow
+5039 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (CU)]
+] -40.0 MCshow
+6479 5140 M
+[ [(Times-Roman) 120.0 0.0 true true 0 (MP)]
+] -40.0 MCshow
+0.200 UL
+LTb
+2.000 UL
+LT1
+0.55 0.00 0.00 C 5760 224 M
+58 238 V
+73 450 V
+73 25 V
+72 -101 V
+73 -152 V
+73 -76 V
+73 -260 V
+72 32 V
+73 -108 V
+73 -82 V
+72 32 V
+6618 76 L
+73 -25 V
+73 -32 V
+6836 0 L
+stroke
+LT1
+0.00 0.55 0.55 C 5760 447 M
+58 91 V
+73 139 V
+73 -170 V
+72 44 V
+73 -51 V
+73 51 V
+73 -38 V
+72 38 V
+73 -146 V
+73 -12 V
+72 -178 V
+73 -63 V
+73 -76 V
+73 -38 V
+72 -13 V
+73 -12 V
+6982 0 L
+stroke
+LT0
+0.00 0.39 0.00 C 5760 366 M
+58 147 V
+73 240 V
+73 127 V
+72 -424 V
+73 57 V
+73 -89 V
+73 -31 V
+72 -51 V
+73 95 V
+73 -6 V
+72 -190 V
+73 -19 V
+6691 76 L
+73 -38 V
+72 13 V
+73 -7 V
+73 -19 V
+7040 0 L
+stroke
+LT0
+LC4 setrgbcolor
+5760 229 M
+58 233 V
+73 70 V
+73 82 V
+72 51 V
+73 -38 V
+73 -139 V
+73 120 V
+72 -32 V
+73 -114 V
+73 -120 V
+72 32 V
+73 -209 V
+73 -89 V
+6764 0 L
+stroke
+LT1
+LC3 setrgbcolor
+5760 1022 M
+58 -91 V
+73 -254 V
+73 -113 V
+72 44 V
+73 -203 V
+73 -82 V
+73 -127 V
+72 -44 V
+73 -32 V
+73 -69 V
+72 12 V
+73 -50 V
+6667 0 L
+stroke
+LT0
+LC2 setrgbcolor
+5760 670 M
+58 71 V
+73 0 V
+73 -215 V
+72 88 V
+73 -12 V
+73 -121 V
+73 -6 V
+72 -209 V
+73 13 V
+73 0 V
+72 -108 V
+73 -70 V
+73 -38 V
+73 -25 V
+72 0 V
+6909 0 L
+stroke
+LT0
+LC1 setrgbcolor
+5760 389 M
+58 162 V
+73 209 V
+73 323 V
+72 -519 V
+73 -76 V
+73 -83 V
+73 -63 V
+72 -38 V
+73 19 V
+73 -25 V
+72 -70 V
+73 -6 V
+6691 95 L
+73 -32 V
+72 -19 V
+73 0 V
+73 -31 V
+7030 0 L
+stroke
+LT0
+LC0 setrgbcolor
+5760 424 M
+58 304 V
+73 38 V
+73 -215 V
+72 -101 V
+73 25 V
+73 108 V
+73 -45 V
+72 -171 V
+73 -63 V
+73 13 V
+72 0 V
+73 -140 V
+73 -6 V
+6764 38 L
+72 0 V
+73 -25 V
+6958 0 L
+stroke
+0.200 UL
+LTb
+5760 1260 N
+5760 0 L
+7200 0 L
+0 1260 V
+-1440 0 V
+Z stroke
+1.000 UP
+0.200 UL
+LTb
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Courier-Bold Times-Roman
+%%Pages: 1

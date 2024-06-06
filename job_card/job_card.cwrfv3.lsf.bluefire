@@ -1,0 +1,22 @@
+#!/bin/tcsh
+
+#BSUB -P 93300156 		# Project 93300156 
+#BSUB -J CWRF.cu3_g3d 		# job name 
+#BSUB -n 64 			# number of total (MPI) tasks
+#BSUB -W 240       # 6:00	# 1 hour wallclock limit (required)
+
+#BSUB -q premium  		# queue
+# #BSUB -q debug          # queue
+#BSUB -a tv             # use totalview elim
+
+# #BSUB -a poe			# select poe
+# #BSUB -x			# exclusive use of node (not_shared)
+
+# #BSUB -R "span[ptile=16]"	# run a max of 8 tasks per node
+
+umask 022
+unlimit 
+
+cd /ptmp/lgchen/projects/CWRFV3_new/CWRF_SVN/CWRFV3.1.1/run_cu3_g3d
+
+mpirun.lsf ./wrf.exe >& log.cwrf_out.cu7_zml.bluefire.201004021407

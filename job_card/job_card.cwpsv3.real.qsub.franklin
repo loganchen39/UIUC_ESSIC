@@ -1,0 +1,14 @@
+#PBS -N CWPSV3
+
+#PBS -q interactive
+#PBS -l mppwidth=1
+#PBS -l walltime=00:30:00
+
+#PBS -e CWPSV3.err
+#PBS -o CWPSV3.out
+
+module load dynamic_libs
+
+cd /scratch/scratchdirs/lgchen/projects/CWPSV3_tiejun_20091223-1154/user_scripts
+# aprun -n 1 ./real.exe
+aprun -a xt ./CWRFPREP.py

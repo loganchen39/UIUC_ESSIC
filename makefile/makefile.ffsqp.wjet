@@ -1,0 +1,6 @@
+ifort -O2 -c -convert big_endian ffsqp.f qld.f
+
+rm -f ffsqp.a
+ar ru ffsqp.a ffsqp.o qld.o
+
+rm -f ffsqp.o qld.o

@@ -1,0 +1,16 @@
+gnuplot plt_lpr_corr_spa_frq_dist.gp
+gnuplot plt_lpr_corr_spa_frq_dist_1.gp
+gnuplot plt_lpr_corr_spa_frq_dist_2.gp
+gnuplot plt_lpr_corr_spa_frq_dist_3.gp
+gnuplot plt_lpr_corr_spa_frq_dist_4.gp
+gnuplot plt_lpr_corr_spa_frq_dist_5.gp
+gnuplot plt_lpr_corr_spa_frq_dist_6.gp
+gnuplot plt_lpr_corr_spa_frq_dist_7.gp
+gnuplot plt_lpr_corr_spa_frq_dist_8.gp
+gnuplot plt_lpr_corr_spa_frq_dist_aio.gp
+gnuplot plt_lpr_corr_spa_frq_dist_pbl.gp
+gnuplot plt_lpr_corr_spa_frq_dist_sfc.gp
+gnuplot plt_opr_corr_spa_frq_dist.gp
+gnuplot plt_opr_corr_spa_frq_dist_aio.gp
+gnuplot plt_opr_corr_spa_frq_dist_pbl.gp
+gnuplot plt_opr_corr_spa_frq_dist_sfc.gp

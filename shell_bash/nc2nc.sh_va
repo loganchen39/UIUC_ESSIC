@@ -1,0 +1,18 @@
+#!/bin/sh
+
+DATAIN_DIR=/mnt/lfs0/projects/ciaqex/xingyuan/HR/run_ori
+DATAOUT_DIR=/misc/whome/lchen/data/PrOpt/WrfoutNcAprDM_1993/nc2nc
+
+cd ${DATAIN_DIR}
+for FILENAME in wrfout_d01_*
+do
+  echo Processing file ${FILENAME} ...
+  cd ${DATAOUT_DIR}
+  rm wrfout.nc
+  ln -sf ${DATAIN_DIR}/${FILENAME} wrfout.nc
+  
+  ~/projects/PrOpt/WrfoutNcAprDM/nc2nc/nc2nc.exe
+
+  mv apr_dm.nc pr_${FILENAME}
+  echo -e "File ${FILENAME} finished.\n\n"
+done

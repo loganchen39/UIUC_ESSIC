@@ -1,0 +1,12 @@
+begin
+  ;f=addfile("mean_v213.nc","w")
+  f=addfile("mean_hr.nc","w")
+  lon=fspan(0.1,19.5,195)
+  lon!0="west_east"
+  lon@units="degree_east"
+  lat=fspan(0.1,13.8,138)
+  lat!0="south_north"
+  lat@units="degree_north"
+  f->south_north=lat
+  f->west_east=lon
+end

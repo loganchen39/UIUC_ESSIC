@@ -1,0 +1,11 @@
+#!/usr/bin/tcsh
+cat subcom_lib.f > ! liblxzlib.F
+cat spline_lib.f >> liblxzlib.F
+cat submm5_lib.f >> liblxzlib.F
+
+ifort -c -i-static -fixed liblxzlib.F
+
+rm -f liblxzlib.a
+ar ru liblxzlib.a liblxzlib.o
+
+rm -f liblxzlib.o

@@ -1,0 +1,26 @@
+#!/bin/tcsh -f
+
+#  Set the name of the job.
+#$ -N CWRF.cu7_zml.May
+#!!!change
+#  Make sure that the .e and .o file arrive in the working directory
+#$ -cwd
+#  Set the account to jetmgmt
+#$ -A ciaqex
+#  Ask for 48 cpus of type comp
+#$ -pe comp  48
+##$ -p 0
+#  My code is re-runnable
+#$ -r n
+#  The max walltime for this job is 15 hours
+#$ -l h_rt=08:00:00
+
+set echo
+setenv F_UFMTENDIAN big
+setenv GMPIENVVAR F_UFMTENDIAN
+echo "STARTING THE JOB"
+echo -n "NODEFILE:"
+cd /mnt/lfs0/projects/ciaqex/lchen/CWRFV3/CWRF_SVN/CWRFV3.1.1/run_cu7_zml
+umask 022
+
+mpirun -np 48 wrf.exe  >&! log.cwrf_out.cu7_zml.wjet.201001071701

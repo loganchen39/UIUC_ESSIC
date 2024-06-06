@@ -1,0 +1,46 @@
+#PBS -N CWPS
+#PBS -q premium
+#PBS -l walltime=12:00:00
+#PBS -l mppwidth=2
+#PBS -V
+#PBS -m n
+#PBS -j eo
+
+#
+# To use this jobcard:
+#    1. aprun doesnot support shell (it supposed to be, but I failed testing), so no restart
+#       (meaning you have to use the combined init data, e.g: ../1993/combined/)
+#    2. add a "&" at the line of "aprun ...", see below.
+#    3. add "wait" at the end, see below
+#    4. apply ${NP} * ${JOB_NUMBER} CPU, in this sample, I apply for 320 CPU = 64 * 5
+#       notice: 1 node (4CPU on franklin) must run the same job,
+#               see http://www.nersc.gov/nusers/systems/franklin/running_jobs/#multiple_simultaneous
+#
+#
+#
+
+module load dynamic_libs
+# module swap PrgEnv-pgi PrgEnv-gnu	# switch to GNU environment
+
+umask 022
+unlimit
+
+set NP = 1
+set MAINDIR = "/scratch/scratchdirs/lgchen/projects/CWPSV3_tiejun_20091223-1154_ser/CWPSV3_tiejun_20091223-1154/user_scripts"
+set TIME = `date +%Y%m%d%H%M%S`
+set LOGFILE = "log.cwps_out."${TIME}
+
+cd ${MAINDIR}
+
+aprun -n 1 -a xt ./CWRFPREP_200911.py >>&! ${LOGFILE}.200911 &
+aprun -n 1 -a xt ./CWRFPREP_200912.py >>&! ${LOGFILE}.200912 &
+# aprun -n 1 -a xt ./CWRFPREP_2009.py >>&! ${LOGFILE}.2009 &
+# aprun -n 1 -a xt ./CWRFPREP_1999.py >>&! ${LOGFILE}.1999 &
+# aprun -n 1 -a xt ./CWRFPREP_2000.py >>&! ${LOGFILE}.2000 &
+# aprun -n 1 -a xt ./CWRFPREP_2001.py >>&! ${LOGFILE}.2001 &
+# aprun -n 1 -a xt ./CWRFPREP_2002.py >>&! ${LOGFILE}.2002 &
+# aprun -n 1 -a xt ./CWRFPREP_2003.py >>&! ${LOGFILE}.2003 &
+# aprun -n 1 -a xt ./CWRFPREP_2005.py >>&! ${LOGFILE}.2005 &
+# aprun -n 1 -a xt ./CWRFPREP_1998.py >>&! ${LOGFILE}.1998 &
+
+wait

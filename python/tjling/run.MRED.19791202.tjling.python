@@ -1,0 +1,340 @@
+#!/usr/bin/python
+
+
+import os
+import glob
+import mymodule
+import re
+#import commands
+#from subprocess import Popen,PIPE
+def ossystem(s):
+    p=os.system(s)
+    if (p <> 0):
+        mymodule.sysecho(" ERROR !!!!!!!!!!!!!!!! "+str(p))
+        mymodule.sysecho(s)
+        import sys
+        sys.exit()
+# ---------- case info ,begin (you can modify)-----------------------------
+
+
+casename = 'CFS'
+ensb_id    = 1
+time_symbol = '1979120200' 
+time_begin = time_symbol
+time_end   =  '1980050100'
+time_intv_hr = '3'
+time_step    = '120'
+
+time_intv_sec = str(int(time_intv_hr) * 60 * 60)
+# ---------- switch of procedure -------------------
+
+prep_real   = True
+run_real    = True
+run_topvbs  = True
+mk_jobcard  = True
+autoqsub    = True
+
+# ---------- directory information-------------------
+wrfroot = '/cfs/scratch/users/xingyuan/MRED'
+wrfsi_root=wrfroot+'/wrfsi'
+moad_dir   = wrfsi_root+'/domains/USA'
+ext_dataroot_dir = wrfsi_root+'/extdata'
+templates_dir = wrfsi_root+'/templates'
+moad_dataroot_dir = wrfsi_root+'/domains/USA'
+si_out_dir = moad_dataroot_dir + '/siprd'
+wrf_root=wrfroot+'/WRFV1.3.2'
+run_dir = wrf_root+'/run/'+casename+'.'+time_begin+'.'+str(ensb_id).zfill(3)
+
+
+#nco_root = '/opt/nco/3.1.6/bin'
+qsub_exe = '/usr/local/bin/qsub'
+save_vars = 'Times,T2M,XFEVPL,XFEVPG,SFCEVP,RAINC,RAINNC,XTSS,XWLIQ,XWICE'
+
+realexename = 'real.exe'
+wrfexename =   'wrf.exe'
+# you need compile WRF132 for 2 times.
+# one for single cpu real.exe, another for mpi wrf.exe
+# so you could rename them for not being overwrite.
+realexename = 'real.exe.abe.single'
+wrfexename =   'wrf.exe'
+#---------- case info end -----------------------------
+
+(timelist,hourstep,begin_julian)=mymodule.timesplit(time_begin,time_end)
+reg=re.compile(r'^\ +',re.M)
+
+#-------------------------------------------------------------------------------
+# real and mk jobcard,qsub                   
+#-------------------------------------------------------------------------------
+# real and mk jobcard,qsub dir and environment setting
+
+#  create dir , copy exe and static data file
+
+if not os.path.exists(run_dir) :
+    os.mkdir(run_dir)
+
+os.chdir(run_dir)
+
+if not os.path.exists(run_dir+'/restrts'):
+    os.mkdir(run_dir+'/restrts')
+
+tempstr=[]
+tempstr.append('cp '+wrf_root+'/main/'+realexename+' ./'+realexename)
+tempstr.append('cp '+wrf_root+'/main/'+wrfexename+' ./'+wrfexename)
+# you should compile these programs top.exe,vbs.exe 
+# according Makefile_wrfinp_top and Makefile_wrfveg_by_sbc
+tempstr.append('cp '+wrf_root+'/wrfcdf/top.exe ./top.exe')
+tempstr.append('cp '+wrf_root+'/wrfcdf/vbs.exe ./vbs.exe')
+tempstr.append('cp -r '+wrf_root+'/wrfcdf/sbcs ./')
+
+tempstr.append('cp '+wrf_root+'/run/LANDUSE.TBL ./')
+tempstr.append('cp '+wrf_root+'/run/O3INPUT_GLOBE_2x2 ./')
+tempstr.append('cp '+wrf_root+'/run/RRTM_DATA ./')
+
+if (prep_real) :
+#    ossystem('ln -sf '+si_out_dir+'/real_input_* .')
+    for i in tempstr:
+        print i
+        ossystem(i)
+
+# prepare namelist for real.exe and wrf.exe
+# and run real.exe , top.exe vbs.exe for whole time period
+
+inputfile_list=['wrfbdy_d01','wrfsst_d01','wrfinput_d01','wrfveg_d01']
+
+for i in range(0,len(timelist)-1):
+    mymodule.sysecho('from '+timelist[i]+' to '+timelist[i+1])
+    filestr='''    &namelist_01
+    time_step_max                       = ''' + str(hourstep[i+1]*3600/int(time_step)) + ''',
+    max_dom                             = 1,
+    dyn_opt                             = 2,
+    rk_ord                              = 3,
+    diff_opt                            = 1,
+    Km_opt                              = 1,
+    damp_opt                            = 0,
+    isfflx                              = 1,
+    ifsnow                              = 1,
+    icloud                              = 1,
+    num_soil_layers                     = 4,
+    nl_soil                             = 10,
+    nl_snow                             = -5,
+    nl_soilpsnow                        = 15,
+    sw_band                             = 4,
+    spec_bdy_width                      = 15,
+    spec_zone                           = 1,
+    relax_zone                          = 14,
+    relax_zone_coef                     = 1,
+    tile_sz_x                           = 50,
+    tile_sz_y                           = 5,
+    numtiles                            = 1,
+    debug_level                         = 0 /
+    
+    &namelist_02
+    grid_id                             = 1,
+    level                               = 1,
+    s_we                                = 1,
+    e_we                                = 196,
+    s_sn                                = 1,
+    e_sn                                = 139,
+    s_vert                              = 1,
+    e_vert                              = 29,
+    time_step_count_output              = 90,
+    frames_per_outfile                  = 8,
+    time_step_count_restart             = 720,
+    time_step_begin_restart             = ''' + str(hourstep[i]*3600/int(time_step)) + ''' ,
+    time_step_sound                     = 4 /
+    
+    &namelist_03
+    dx                                  = 30000,
+    dy                                  = 30000,
+    dt                                  = ''' + time_step+ '''.,
+    ztop                                = 30915.,
+    zdamp                               = 5000.,
+    dampcoef                            = 0.2,
+    non_hydrostatic                     = .true.,
+    smdiv                               = 0.1,
+    emdiv                               = 0.01,
+    epssm                               = .1,
+    khdif                               = 0,
+    kvdif                               = 0,
+    mix_cr_len                          = 200.,
+    radt                                = 30,
+    sfdt                                = 0,
+    bldt                                = 0,
+    cudt                                = 0,
+    julyr                               = ''' + time_begin[0:4] + ''' ,
+    julday                              = ''' + begin_julian + ''',
+    gmt                                 = 0. /
+    
+    &namelist_04
+    periodic_x                          = .false.,
+    symmetric_xs                        = .false.,
+    symmetric_xe                        = .false.,
+    open_xs                             = .false.,
+    open_xe                             = .false.,
+    periodic_y                          = .false.,
+    symmetric_ys                        = .false.,
+    symmetric_ye                        = .false.,
+    open_ys                             = .false.,
+    open_ye                             = .false.,
+    nested                              = .false.,
+    specified                           = .true.,
+    specified_sst                       = .true.,
+    specified_veg                       = .true.,
+    specified_ozn                       = .true.,
+    top_radiation                       = .false.,
+    docosz_in_rad                       = .false.,
+    chem_opt                            = 0,
+    mp_physics                          = 8,
+    ra_cld_physics                      = 2,
+    ra_lw_physics                       = 8,
+    ra_sw_physics                       = 8,
+    sf_sfclay_physics                   = 1,
+    sf_surface_physics                  = 3,
+    bl_pbl_physics                      = 3,
+    cu_physics                          = 3,
+    h_mom_adv_order                     = 5,
+    v_mom_adv_order                     = 3,
+    h_sca_adv_order                     = 5,
+    v_sca_adv_order                     = 3,
+    io_form_history                     = 2,
+    io_form_restart                     = 2,
+    io_form_input                       = 2,
+    io_form_auxinput1                   = 2,
+    io_form_auxinput2                   = 2,
+    io_form_boundary                    = 2 /
+    
+    &namelist_05
+    start_year                          = '''+timelist[i][0:4]+''',
+    start_month                         = '''+timelist[i][4:6]+''',
+    start_day                           = '''+timelist[i][6:8]+''',
+    start_hour                          = '''+timelist[i][8:10]+''',
+    start_minute                        = 00,
+    start_second                        = 00,
+    end_year                            = '''+timelist[i+1][0:4]+''',
+    end_month                           = '''+timelist[i+1][4:6]+''',
+    end_day                             = '''+timelist[i+1][6:8]+''',
+    end_hour                            = '''+timelist[i+1][8:10]+''',
+    end_minute                          = 00,
+    end_second                          = 00,
+    interval_seconds                    = '''+time_intv_sec+''',
+    interval_sec_sst                    = 86400,
+    interval_sec_veg                    = 86400,
+    real_data_init_type                 = 1 /
+    
+    &namelist_quilt
+    nio_tasks_per_group                 = 0,
+    nio_groups                          = 1 /'''
+    filestr=re.sub(reg,r' ',filestr)
+    f=open('namelist.input'+'.'+timelist[i],'w')
+    f.write(filestr)
+    f.close()
+    # run real.exe
+    if (prep_real) :
+        ossystem('rm -f real_input_*')
+        ossystem('ln -sf '+si_out_dir+'/real_input_*'+timelist[i][0:4]+'-'+timelist[i][4:6]+'*' +' .')
+        nextmonthf=si_out_dir+'/real_input_em.d01.'+timelist[i+1][0:4]+'-'+timelist[i+1][4:6]+'-'+timelist[i+1][6:8]+'_'+'00:00:00'
+	print(nextmonthf)
+        if os.path.isfile(nextmonthf):
+	    print('nextmontf exists')
+            ossystem('ln -sf '+nextmonthf +' .')
+	ossystem('ln -sf '+si_out_dir+'/real_input_em.global.metadata .')
+
+
+    if ( run_real ) :
+        for inputfile in inputfile_list :
+            ossystem('rm -f '+inputfile)
+            ossystem('rm -f '+inputfile+'.'+timelist[i])
+        print 'cp namelist.input'+'.'+timelist[i]+' namelist.input'
+        ossystem('cp namelist.input'+'.'+timelist[i]+' namelist.input')
+        print 'time '+realexename
+        ossystem('time '+realexename)
+
+        for inputfile in inputfile_list :
+            ossystem('mv '+inputfile+' '+inputfile+'.'+timelist[i])
+
+    if ( run_topvbs ): 
+        ossystem("rm -f wrfinput_d01")
+        ossystem("ln -sf wrfinput_d01."+timelist[i] + "  wrfinput_d01")
+        ossystem("rm -f wrfveg_d01")
+        ossystem("ln -sf wrfveg_d01."+timelist[i] + "  wrfveg_d01")
+
+        mymodule.sysecho('top.exe')
+        ossystem('top.exe')
+        filestr = timelist[i][0:4] + ',' + timelist[i][4:6] + ',' + timelist[i][6:8] + ''' 
+        ''' + timelist[i+1][0:4] + ',' + timelist[i+1][4:6] + ',' + timelist[i+1][6:8] + '''
+        
+        '''
+        filestr=re.sub(reg,r' ',filestr)
+        f=open('temp.in','w')
+        f.write(filestr)
+        f.close()
+        mymodule.sysecho('vbs.exe < temp.in')
+        ossystem('vbs.exe < temp.in')
+    
+    # create wrf job card for whole time period
+    if ( mk_jobcard ) :
+        jobcard='''#!/bin/tcsh
+        #  Set the name of the job.
+        #PBS -N CWRF.'''+casename+'.'+timelist[i]+'''
+        #PBS -q normal
+        #PBS -l nodes=6:ppn=8
+        #PBS -l walltime=02:59:00
+            cd '''+run_dir+'''
+            rm -f '''+" ".join(inputfile_list)
+        for inputfile in inputfile_list:
+            jobcard=jobcard+'''
+            ln -sf '''+inputfile+'''.'''+timelist[i]+'''  '''+inputfile
+        jobcard=jobcard+'''
+            umask 022
+            unlimit
+            cp namelist.input.'''+timelist[i]+''' namelist.input
+            setenv NP `wc -l ${PBS_NODEFILE} | cut -d'/' -f1`
+            mvapich2-start-mpd
+            setenv MV2_SRQ_SIZE 4000
+            /u/ac/xingyuan/mvapich2-1.2-intel9.1/bin/mpirun -np $NP '''+wrfexename+''' >&! '''+wrfexename+'.'+timelist[i]+'''.out
+            mpdallexit
+            #rcdf.exe < post_wrfout.'''+timelist[i]+''' >& rcdf.out
+            #rm -f wrfout*
+            cp rsl.out.0000 '''+timelist[i]+'''.rsl.out.0000
+            sleep 3
+            '''
+        if (i<len(timelist)-2):
+            jobcard=jobcard+'''
+            '''+qsub_exe+''' JOB.'''+timelist[i+1]+'''
+
+            echo "RUN OVER"
+
+            '''
+        elif (i==len(timelist)-2):
+            jobcard=jobcard+'''
+            if ( `tail '''+timelist[i]+'''.rsl.out.0000` =~ "*SUCCESS*" ) then
+                echo "Normal COMPLETE of WRF"'''
+            for inputfile in inputfile_list:
+                jobcard=jobcard+'''
+                #rm -f '''+inputfile+'''*'''
+            jobcard=jobcard+'''
+                #rm -f wrfrst*
+                #cd ./restrts/
+                #mv `ls -t wrfrst* | head -1` ../
+                #rm -f wrfrst*
+                #cd ../'''
+            jobcard=jobcard+'''    
+            endif
+            
+            echo "RUN OVER"
+
+            '''
+    
+        f=open('JOB.'+timelist[i],'w')
+        jobcard=re.sub(reg,r'',jobcard)
+        f.write(jobcard)
+        f.close()
+
+if (run_real) :
+    ossystem('rm -f real_input_*')
+
+if (autoqsub ) :
+    ossystem('qsub JOB.'+time_begin)
+
+mymodule.sysecho("!!!!!!!!!!! COMPLETE RUN.PY !!!!!!!!!!!!!!!! ")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

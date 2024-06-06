@@ -1,0 +1,25 @@
+#!/bin/tcsh
+#PBS -N CWRF_7ra
+#PBS -q regular
+#PBS -l walltime=36:00:00
+#PBS -l mppwidth=504
+#PBS -V
+#PBS -m n
+#PBS -j eo
+
+module swap PrgEnv-pgi PrgEnv-gnu
+
+set TIME = `date +%Y%m%d%H%M%S`
+set LOGFILE = "log.cwrf_out."${TIME}
+set NP = 64
+unlimit
+
+cd /global/scratch/sd/shenjian/run/ra/cam    ; aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}  &
+cd /global/scratch/sd/shenjian/run/ra/cawcr  ; aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}  &
+cd /global/scratch/sd/shenjian/run/ra/cccma  ; aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}  &
+cd /global/scratch/sd/shenjian/run/ra/flg    ; aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}  &
+cd /global/scratch/sd/shenjian/run/ra/gfdl   ; aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}  &
+cd /global/scratch/sd/shenjian/run/ra/gsfclxz; aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}  &
+cd /global/scratch/sd/shenjian/run/ra/rrtmg  ; aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}  &
+
+wait

@@ -1,0 +1,30 @@
+PROG =	PrOpt.exe
+
+SRCS =	PrOpt.f90 module_usrfunc.f90
+
+OBJS =	PrOpt.o module_usrfunc.o
+
+LIBS =	~/lib/libc/liblxzlib.a ~/lib/ffsqp/ffsqp.a /opt/netcdf/3.6.1-intel-9.1/lib/libnetcdf.a
+
+CC = cc
+CFLAGS = -O
+FC = f77
+FFLAGS = -O
+F90 = ifort
+F90FLAGS = -O
+LDFLAGS = -static
+
+all: $(PROG)
+
+$(PROG): $(OBJS)
+	$(F90) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+
+clean:
+	rm -f $(PROG) $(OBJS) *.mod
+
+.SUFFIXES: $(SUFFIXES) .f90
+
+.f90.o:
+	$(F90) $(F90FLAGS) -c $<
+
+PrOpt.o: module_usrfunc.o

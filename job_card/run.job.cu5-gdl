@@ -1,0 +1,94 @@
+#!/bin/tcsh
+
+#PBS -N CWRF_cu5-gdl_1993
+#PBS -q premium
+#PBS -l walltime=24:00:00
+#PBS -l mppwidth=64
+#PBS -V
+#PBS -m n
+#PBS -j eo
+
+module swap PrgEnv-pgi PrgEnv-gnu
+
+#
+# Need to be changed:
+#  1. job name
+#  2. job queue
+#  3. walltime
+#  4. CPU number
+#  5. run directory
+#  6. input data path
+#  7. which months to run (if you don't want to run 1 year)
+#  8. up to you
+#
+
+set TIME = `date +%Y%m%d%H%M%S`
+set LOGFILE = "log.cwrf_out."${TIME}
+set NP = 64
+
+cd /scratch2/scratchdirs/lgchen/projects/CWRFV3/cwrf_run/cumulus_test/1993/run_cu5_gdl
+umask 022
+unlimit
+
+# 1992120100
+# set TF = "1992120100"
+# 
+# date
+# date >> ${LOGFILE}.${TF}
+# ln -sf ./namelist.input.${TF}                            ./namelist.input
+# ln -sf ~/global_cwrf/ctrl_30yr/1992/wrfbdy_d01.${TF}     ./wrfbdy_d01
+# ln -sf ~/global_cwrf/ctrl_30yr/1992/wrfinput_d01.${TF}   ./wrfinput_d01
+# ln -sf ~/global_cwrf/ctrl_30yr/1992/wrflowinp_d01.${TF}  ./wrflowinp_d01
+# ln -sf ~/global_cwrf/ctrl_30yr/1992/wrfsst_d01.${TF}     ./wrfsst_d01
+# ln -sf ~/global_cwrf/ctrl_30yr/1992/wrfveg_d01.${TF}     ./wrfveg_d01
+# ls -l >> ${LOGFILE}.${TF}
+# aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}.${TF}
+# date >> ${LOGFILE}.${TF}
+# date
+# tar cvf rsl${TF}.tar rsl*
+# rm -rf rsl.error.* rsl.out.*
+
+# for 1993
+# foreach m (1 2 3 4 5 6 7 8 9 10 11 12)
+foreach m (9 10 11 12)
+    if( "$m" == "1" ) then
+      set TF = "1993010100"
+    else if( "$m" == "2" ) then
+      set TF = "1993020100"
+    else if ( "$m" == "3" ) then
+      set TF = "1993030100"
+    else if ( "$m" == "4" ) then
+      set TF = "1993040100"
+    else if ( "$m" == "5" ) then
+      set TF = "1993050100"
+    else if ( "$m" == "6" ) then
+      set TF = "1993060100"
+    else if ( "$m" == "7" ) then
+      set TF = "1993070100"
+    else if ( "$m" == "8" ) then
+      set TF = "1993080100"
+    else if ( "$m" == "9" ) then
+      set TF = "1993090100"
+    else if ( "$m" == "10" ) then
+      set TF = "1993100100"
+    else if ( "$m" == "11" ) then
+      set TF = "1993110100"
+    else if ( "$m" == "12" ) then
+      set TF = "1993120100"
+    endif
+
+    date
+    date >> ${LOGFILE}.${TF}
+    ln -sf ./namelist.input.${TF}                            ./namelist.input
+    ln -sf ~/global_cwrf/ctrl_30yr/1993/wrfbdy_d01.${TF}     ./wrfbdy_d01
+    ln -sf ~/global_cwrf/ctrl_30yr/1993/wrfinput_d01.${TF}   ./wrfinput_d01
+    ln -sf ~/global_cwrf/ctrl_30yr/1993/wrflowinp_d01.${TF}  ./wrflowinp_d01
+    ln -sf ~/global_cwrf/ctrl_30yr/1993/wrfsst_d01.${TF}     ./wrfsst_d01
+    ln -sf ~/global_cwrf/ctrl_30yr/1993/wrfveg_d01.${TF}     ./wrfveg_d01
+    ls -l >> ${LOGFILE}.${TF}
+    aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE}.${TF}
+    date >> ${LOGFILE}.${TF}
+    date
+    tar cvf rsl${TF}.tar rsl.error.* rsl.out.*
+    rm -rf rsl.error.* rsl.out.*
+end

@@ -1,0 +1,51 @@
+#!/bin/tcsh
+
+#PBS -N CWRF_1993MJJ
+#PBS -q premium
+#PBS -l walltime=24:00:00
+#PBS -l mppwidth=640
+#PBS -l mppnppn=4
+#PBS -V
+#PBS -m n
+#PBS -j eo
+
+#
+# To use this jobcard:
+#    1. aprun doesnot support shell (it supposed to be, but I failed testing), so no restart
+#       (meaning you have to use the combined init data, e.g: ../1993/combined/)
+#    2. add a "&" at the line of "aprun ...", see below.
+#    3. add "wait" at the end, see below
+#    4. apply ${NP} * ${JOB_NUMBER} CPU, in this sample, I apply for 320 CPU = 64 * 5
+#       notice: 1 node (4CPU on franklin) must run the same job,
+#               see http://www.nersc.gov/nusers/systems/franklin/running_jobs/#multiple_simultaneous
+#
+#
+#
+
+# module swap PrgEnv-pgi PrgEnv-gnu	 # switch to GNU environment
+
+umask 022
+unlimit
+
+set NP = 64
+set MAINDIR = "/scratch/scratchdirs/lgchen/projects/CWRFV3/cwrf_run/cumulus_test/1993"
+set TIME = `date +%Y%m%d%H%M%S`
+set LOGFILE = "log.cwrf_out.1993MJJ."${TIME}
+
+set CU_NUM = 10
+set dir    = (run_cu0_nocu run_cu1_kf run_cu2_bmj run_cu3_g3d run_cu4_gd       \
+              run_cu5_gdl run_cu6_sas run_cu8_radall run_cu9_gfdl run_cu99_pkf \
+             )  # no run_cu7_zml 
+
+cd $MAINDIR
+set i = 1
+while ($i <= $CU_NUM)
+# while ($i <= 5)
+    cd ./$dir[$i]
+    aprun -n ${NP} ./wrf.exe >>&! ${LOGFILE} &
+
+    cd ..
+    @ i++
+end
+
+wait

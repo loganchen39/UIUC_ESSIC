@@ -1,0 +1,17 @@
+#!/bin/tcsh
+#PBS -l walltime=00:29:00
+#PBS -l nodes=3:ppn=8
+#PBS -q debug
+#PBS -N clmvast
+#PBS -o clmvast.1979.out
+#PBS -e clmvast.1979.err
+cd /cfs/scratch/users/xingyuan/CLMCSSoutput/clmvast
+rm -f namelist
+ln -s namelist.1979 namelist
+setenv NP `wc -l ${PBS_NODEFILE} | cut -d'/' -f1`
+mvapich2-start-mpd
+setenv MV2_SRQ_SIZE 4000
+mpirun -np $NP clmvast.exe<namelist>&log.clm1979
+mpdallexit
+/usr/local/bin/qsub JOB.1982
+echo "RUN OVER"
